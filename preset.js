@@ -16,14 +16,14 @@ module.exports = {
         __DEV__: process.env.NODE_ENV !== 'production' || true,
       }),
     );
-    
+
     // fix for uncompiled react-native dependencies
     config.module.rules.push({
       test: /\.(js|jsx|ts|tsx)$/,
       loader: 'babel-loader',
       include: [
-        path.resolve(__dirname, '../node_modules/react-native-vector-icons'),
-        path.resolve(__dirname, '../node_modules/react-native-reanimated'),
+        path.resolve(__dirname, 'node_modules/react-native-vector-icons'),
+        path.resolve(__dirname, 'node_modules/react-native-reanimated'),
       ],
       options: {
         presets: [
@@ -34,21 +34,22 @@ module.exports = {
         plugins: [
           'react-native-web',
           '@babel/plugin-proposal-class-properties',
+          'react-native-reanimated/plugin',
         ],
       },
     });
 
     config.module.rules.push({
       test: /\.ttf$/,
-      loader: 'url-loader', // or directly file-loader
+      loader: 'url-loader',
       include: [
         path.resolve(
           __dirname,
-          '../node_modules/react-native-vector-icons/MaterialCommunityIcons.js',
+          'node_modules/react-native-vector-icons/MaterialCommunityIcons.js',
         ),
         path.resolve(
           __dirname,
-          '../node_modules/react-native-vector-icons/MaterialIcons.js',
+          'node_modules/react-native-vector-icons/MaterialIcons.js',
         ),
       ],
     });
