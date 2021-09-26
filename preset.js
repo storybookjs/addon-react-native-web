@@ -16,11 +16,11 @@ module.exports = {
         __DEV__: process.env.NODE_ENV !== 'production' || true,
       }),
     );
+    
     // fix for uncompiled react-native dependencies
     config.module.rules.push({
       test: /\.(js|jsx|ts|tsx)$/,
       loader: 'babel-loader',
-      exclude: [/react-native-web/, /\.(native|ios|android)\.(ts|js)x?$/],
       include: [
         path.resolve(__dirname, '../node_modules/react-native-vector-icons'),
         path.resolve(__dirname, '../node_modules/react-native-reanimated'),
