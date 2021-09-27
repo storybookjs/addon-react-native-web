@@ -12,7 +12,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
 
-import { Header } from '../Header';
+import { Header } from './Header';
 import styles from './page.styles';
 
 interface PageProps {
