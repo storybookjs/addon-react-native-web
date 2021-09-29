@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from 'react-native';
+import { Text } from 'react-native';
 import {
   Card as PaperCard,
   Avatar,
@@ -7,24 +7,26 @@ import {
   Title,
   Paragraph,
 } from 'react-native-paper';
+import { FolderIcon } from '../Svg/FolderIcon';
 
-const LeftContent = (props: any) => <Avatar.Icon {...props} icon="folder" />;
+const LeftContent = (props: any) => (
+  <Avatar.Icon {...props} icon={FolderIcon} />
+);
 
-export const Card = ({}) => (
+export const Card = ({ title, content, onCancel, onConfirm }) => (
   <PaperCard>
     <PaperCard.Title
-      title="Card Title"
-      subtitle="Card Subtitle"
+      title={title}
+      subtitle='Card Subtitle'
       left={LeftContent}
     />
     <PaperCard.Content>
-      <Title>Card title</Title>
-      <Paragraph>Card content</Paragraph>
+      <Paragraph>{content}</Paragraph>
     </PaperCard.Content>
-    <PaperCard.Cover source={{uri: 'https://picsum.photos/700'}} />
+    <PaperCard.Cover source={{ uri: 'https://picsum.photos/700' }} />
     <PaperCard.Actions>
-      <Button onPress={() => null}>Cancel</Button>
-      <Button onPress={() => null}>Ok</Button>
+      <Button onPress={onCancel}>Cancel</Button>
+      <Button onPress={onConfirm}>Ok</Button>
     </PaperCard.Actions>
   </PaperCard>
 );
