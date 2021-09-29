@@ -1,5 +1,5 @@
-import React, {ReactNode} from 'react';
-import {StyleProp, ViewStyle} from 'react-native';
+import React, { ReactNode } from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
 import {
   PanGestureHandler,
   PanGestureHandlerGestureEvent,
@@ -21,7 +21,7 @@ type ContextType = {
   y: number;
 };
 
-export const Draggable = ({children, style}: DraggableProps) => {
+export const Draggable = ({ children, style }: DraggableProps) => {
   const x = useSharedValue(0);
   const y = useSharedValue(0);
   const panGestureEvent = useAnimatedGestureHandler<
@@ -58,10 +58,11 @@ export const Draggable = ({children, style}: DraggableProps) => {
     <PanGestureHandler onGestureEvent={panGestureEvent}>
       <Animated.View
         style={[
-          {display: 'flex', justifyContent: 'center', alignItems: 'center'},
+          { display: 'flex', justifyContent: 'center', alignItems: 'center' },
           panStyle,
           style,
-        ]}>
+        ]}
+      >
         {children}
       </Animated.View>
     </PanGestureHandler>
