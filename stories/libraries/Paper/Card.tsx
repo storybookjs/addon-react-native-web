@@ -13,7 +13,14 @@ const LeftContent = (props: any) => (
   <Avatar.Icon {...props} icon={FolderIcon} />
 );
 
-export const Card = ({ title, content, onCancel, onConfirm }) => (
+interface CardProps {
+  title: string;
+  content: string;
+  onCancel: () => void;
+  onConfirm: () => void;
+}
+
+export const Card = ({ title, content, onCancel, onConfirm }: CardProps) => (
   <PaperCard>
     <PaperCard.Title
       title={title}
