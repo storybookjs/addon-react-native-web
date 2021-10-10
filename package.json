@@ -1,7 +1,7 @@
 {
   "name": "@storybook/addon-react-native-web",
   "version": "0.0.0",
-  "description": "everything you need to build a Storybook addon",
+  "description": "Configure React storybook for react-native-web",
   "keywords": [
     "storybook-addons",
     "react-native",
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybookjs/storybook-addon-kit"
+    "url": "https://github.com/storybookjs/addon-react-native-web"
   },
   "license": "MIT",
   "main": "dist/cjs/index.js",
