@@ -3,6 +3,8 @@ const webpack = require('webpack');
 
 module.exports = {
   webpackFinal: async (config) => {
+    const cwd = process.cwd();
+
     config.resolve.alias = {
       'react-native$': 'react-native-web',
       'react-native-svg': 'react-native-svg-web',
@@ -22,8 +24,8 @@ module.exports = {
       test: /\.(js|jsx|ts|tsx)$/,
       loader: 'babel-loader',
       include: [
-        path.resolve(__dirname, 'node_modules/react-native-vector-icons'),
-        path.resolve(__dirname, 'node_modules/react-native-reanimated'),
+        path.resolve(cwd, 'node_modules/react-native-vector-icons'),
+        path.resolve(cwd, 'node_modules/react-native-reanimated'),
       ],
       options: {
         presets: [
@@ -44,11 +46,11 @@ module.exports = {
       loader: 'url-loader',
       include: [
         path.resolve(
-          __dirname,
+          cwd,
           'node_modules/react-native-vector-icons/MaterialCommunityIcons.js',
         ),
         path.resolve(
-          __dirname,
+          cwd,
           'node_modules/react-native-vector-icons/MaterialIcons.js',
         ),
       ],
