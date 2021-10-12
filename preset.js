@@ -3,6 +3,8 @@ const webpack = require('webpack');
 
 module.exports = {
   webpackFinal: async (config) => {
+    const cwd = process.cwd();
+
     config.resolve.alias = {
       'react-native$': 'react-native-web',
       'react-native-svg': 'react-native-svg-web',
@@ -16,14 +18,14 @@ module.exports = {
         __DEV__: process.env.NODE_ENV !== 'production' || true,
       }),
     );
+
     // fix for uncompiled react-native dependencies
     config.module.rules.push({
       test: /\.(js|jsx|ts|tsx)$/,
       loader: 'babel-loader',
-      exclude: [/react-native-web/, /\.(native|ios|android)\.(ts|js)x?$/],
       include: [
-        path.resolve(__dirname, '../node_modules/react-native-vector-icons'),
-        path.resolve(__dirname, '../node_modules/react-native-reanimated'),
+        path.resolve(cwd, 'node_modules/react-native-vector-icons'),
+        path.resolve(cwd, 'node_modules/react-native-reanimated'),
       ],
       options: {
         presets: [
@@ -34,21 +36,22 @@ module.exports = {
         plugins: [
           'react-native-web',
           '@babel/plugin-proposal-class-properties',
+          'react-native-reanimated/plugin',
         ],
       },
     });
 
     config.module.rules.push({
       test: /\.ttf$/,
-      loader: 'url-loader', // or directly file-loader
+      loader: 'url-loader',
       include: [
         path.resolve(
-          __dirname,
-          '../node_modules/react-native-vector-icons/MaterialCommunityIcons.js',
+          cwd,
+          'node_modules/react-native-vector-icons/MaterialCommunityIcons.js',
         ),
         path.resolve(
-          __dirname,
-          '../node_modules/react-native-vector-icons/MaterialIcons.js',
+          cwd,
+          'node_modules/react-native-vector-icons/MaterialIcons.js',
         ),
       ],
     });
