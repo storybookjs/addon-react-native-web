@@ -16,16 +16,6 @@ Then edit your `.storybook/main.js`:
 ```js
 module.exports = {
   addons: [/*existing addons,*/ '@storybook/addon-react-native-web']
-  babel: async options => {
-    return {
-      ...options,
-      plugins: [
-        ...options.plugins,
-        'react-native-web',
-        'react-native-reanimated/plugin',
-      ],
-    };
-  },
 }
 ```
 

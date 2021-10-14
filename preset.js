@@ -5,8 +5,6 @@ module.exports = {
   babel: async (options) => {
     return {
       ...options,
-      babelrc: false,
-      configFile: false,
       plugins: [
         ...options.plugins,
         'react-native-web',
