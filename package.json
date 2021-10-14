@@ -40,6 +40,7 @@
     "eject-ts": "zx scripts/eject-typescript.mjs"
   },
   "devDependencies": {
+    "babel-plugin-react-native-web": "^0.17.5",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",

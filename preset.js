@@ -1,15 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const plugins = ['react-native-web'];
+try {
+  require('react-native-reanimated');
+  plugins.push('react-native-reanimated/plugin');
+} catch (e) {
+  if (e && e.code !== 'MODULE_NOT_FOUND') {
+    plugins.push('react-native-reanimated/plugin');
+  }
+}
+
 module.exports = {
   babel: async (options) => {
     return {
       ...options,
-      plugins: [
-        ...options.plugins,
-        'react-native-web',
-        'react-native-reanimated/plugin',
-      ],
+      plugins: [...options.plugins, ...plugins],
     };
   },
   webpackFinal: async (config) => {
@@ -42,11 +48,7 @@ module.exports = {
           '@babel/preset-react',
           'module:metro-react-native-babel-preset',
         ],
-        plugins: [
-          'react-native-web',
-          '@babel/plugin-proposal-class-properties',
-          'react-native-reanimated/plugin',
-        ],
+        plugins: ['@babel/plugin-proposal-class-properties', ...plugins],
       },
     });
 
