@@ -8,7 +8,7 @@ Assuming you've got an existing RN project, run the following from the project r
 
 ```sh
 npx sb@next init --type react
-yarn add react-dom react-native-web @storybook/addon-react-native-web --dev
+yarn add react-dom react-native-web babel-plugin-react-native-web @storybook/addon-react-native-web --dev
 ```
 
 Then edit your `.storybook/main.js`:
@@ -16,6 +16,16 @@ Then edit your `.storybook/main.js`:
 ```js
 module.exports = {
   addons: [/*existing addons,*/ '@storybook/addon-react-native-web']
+  babel: async options => {
+    return {
+      ...options,
+      plugins: [
+        ...options.plugins,
+        'react-native-web',
+        'react-native-reanimated/plugin',
+      ],
+    };
+  },
 }
 ```
 
