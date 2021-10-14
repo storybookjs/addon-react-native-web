@@ -2,12 +2,21 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  babel: async (options) => {
+    return {
+      ...options,
+      plugins: [
+        ...options.plugins,
+        'react-native-web',
+        'react-native-reanimated/plugin',
+      ],
+    };
+  },
   webpackFinal: async (config) => {
     const cwd = process.cwd();
 
     config.resolve.alias = {
       'react-native$': 'react-native-web',
-      'react-native-svg': 'react-native-svg-web',
     };
 
     config.plugins.push(
@@ -39,21 +48,6 @@ module.exports = {
           'react-native-reanimated/plugin',
         ],
       },
-    });
-
-    config.module.rules.push({
-      test: /\.ttf$/,
-      loader: 'url-loader',
-      include: [
-        path.resolve(
-          cwd,
-          'node_modules/react-native-vector-icons/MaterialCommunityIcons.js',
-        ),
-        path.resolve(
-          cwd,
-          'node_modules/react-native-vector-icons/MaterialIcons.js',
-        ),
-      ],
     });
 
     config.resolve.extensions = ['.web.js', ...config.resolve.extensions];
