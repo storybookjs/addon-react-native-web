@@ -3,7 +3,19 @@ module.exports = {
     '../stories/**/*.stories.mdx',
     '../stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: ['../preset.js', '@storybook/addon-essentials'],
+  addons: [
+    {
+      name: '../preset.js',
+      options: {
+        modulesToTranspile: [
+          'react-native-reanimated',
+          'react-native-vector-icons',
+        ],
+        babelPlugins: ['react-native-reanimated/plugin'],
+      },
+    },
+    '@storybook/addon-essentials',
+  ],
   features: {
     babelModeV7: true,
   },
