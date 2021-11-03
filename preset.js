@@ -15,9 +15,9 @@ const getModulesToTranspile = (options) => {
       // returns the path to the entry point file like addon-react-native-web/node_modules/react-native-reanimated/lib/Animated.js'
       const fullPath = require.resolve(moduleName);
 
-      const stringToFind = `node_modules/${moduleName}`;
+      const stringToFind = `node_modules/${moduleName}/`;
 
-      // remove everything after 'node_modules/module_name'
+      // remove everything after 'node_modules/module_name/'
       const adjustedPath = fullPath.substring(
         0,
         fullPath.indexOf(stringToFind) + stringToFind.length,
