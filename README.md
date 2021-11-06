@@ -128,9 +128,6 @@ Click to here to see the config
 </summary>
 Due to the vector icons dependency add the following
 
-Note that full support for the vector icons library requires more involved config.
-More info soon.
-
 ```js
 module.exports = {
   addons: [
@@ -157,9 +154,6 @@ module.exports = {
 Click to here to see the config
 </summary>
 Due to the vector icons dependency add the following
-
-Note that full support for the vector icons library requires more involved config.
-More info soon.
 
 ```js
 module.exports = {
