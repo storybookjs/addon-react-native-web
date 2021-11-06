@@ -2,6 +2,14 @@
 
 This addon configures `@storybook/react` to display React Native (RN) projects using React Native for Web (RNW)
 
+- [React Native Web addon for Storybook](#react-native-web-addon-for-storybook)
+  - [Getting Started](#getting-started)
+  - [Extra config](#extra-config)
+    - [Untranspiled react native libraries](#untranspiled-react-native-libraries)
+    - [Adding babel plugins](#adding-babel-plugins)
+  - [Configuring popular libraries](#configuring-popular-libraries)
+  - [Known limitations](#known-limitations)
+
 ## Getting Started
 
 Assuming you've got an existing RN project, run the following from the project root:
