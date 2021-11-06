@@ -69,9 +69,9 @@ module.exports = {
 };
 ```
 
-### Configuring popular libraries
+## Configuring popular libraries
 
-Many libraries work without extra config, I've included some examples of libraries and the config needed here.
+Many libraries work without extra config, heres some examples of config required for some packages.
 
 Note: react-native-vector-icons requires some extra steps due to fonts required and there will be a future addon
 with that config included.
