@@ -50,9 +50,55 @@ module.exports = {
 
 Replace `react-native-package-name` with the name of a real package.
 
-### Reanimated support
+### Adding babel plugins
 
-Reanimated is supported, however you will need to add some options to the addon as follows:
+It's common to provide a babel plugin for certain packages in the react native eco system and you can pass a list of these
+to the addon.
+
+```
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        babelPlugins: ['babel-plugin-name'],
+      },
+    },
+  ],
+};
+```
+
+### Configuring popular libraries
+
+Many libraries work without extra config, I've included some examples of libraries and the config needed here.
+
+Note: react-native-vector-icons requires some extra steps due to fonts required and there will be a future addon
+with that config included.
+
+<table>
+<tr>
+<td>Package</td> <td>Required config</td>
+</tr>
+
+<tr>
+<td>react-native-svg</td>
+<td>No extra config needed</td>
+</tr>
+
+<tr>
+<td>react-native-gesture-handler</td>
+<td>No extra config needed</td>
+</tr>
+
+<tr>
+<td>react-native-reanimated</td> 
+<td>
+
+<details>
+<summary>
+Click to here to see the config
+</summary>
 
 ```js
 module.exports = {
@@ -69,7 +115,71 @@ module.exports = {
 };
 ```
 
-This is necessary because reanimated uses a babel plugin to enable certain features of the library.
+</details>
+</td>
+</tr>
+
+<tr>
+<td>native-base</td>
+<td> 
+<details>
+<summary>
+Click to here to see the config
+</summary>
+Due to the vector icons dependency add the following
+
+Note that full support for the vector icons library requires more involved config.
+More info soon.
+
+```js
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        modulesToTranspile: ['react-native-vector-icons'],
+      },
+    },
+  ],
+};
+```
+
+</details>
+</td>
+</tr>
+
+<tr>
+<td>react-native-paper</td>
+<td> 
+<details>
+<summary>
+Click to here to see the config
+</summary>
+Due to the vector icons dependency add the following
+
+Note that full support for the vector icons library requires more involved config.
+More info soon.
+
+```js
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        modulesToTranspile: ['react-native-vector-icons'],
+      },
+    },
+  ],
+};
+```
+
+</details>
+</td>
+</tr>
+
+</table>
 
 ## Known limitations
 
