@@ -1,3 +1,15 @@
+# v0.0.3 (Wed Nov 10 2021)
+
+#### 🐛 Bug Fix
+
+- docs: some example config [#3](https://github.com/storybookjs/addon-react-native-web/pull/3) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.2 (Wed Nov 03 2021)
 
 #### 🐛 Bug Fix
