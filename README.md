@@ -188,3 +188,5 @@ module.exports = {
 - Libraries that don't support react-native-web will not work
 - Components will display on the web so may not be the same as a component on a mobile device since dom versions of those components may be used (like `<div>` and `span`)
   - when using primitives such as View/Text or other cross platform components then the difference should be minimal.
+
+See the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md) for more information.
