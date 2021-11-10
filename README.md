@@ -2,6 +2,14 @@
 
 This addon configures `@storybook/react` to display React Native (RN) projects using React Native for Web (RNW)
 
+- [React Native Web addon for Storybook](#react-native-web-addon-for-storybook)
+  - [Getting Started](#getting-started)
+  - [Extra config](#extra-config)
+    - [Untranspiled react native libraries](#untranspiled-react-native-libraries)
+    - [Adding babel plugins](#adding-babel-plugins)
+  - [Configuring popular libraries](#configuring-popular-libraries)
+  - [Known limitations](#known-limitations)
+
 ## Getting Started
 
 Assuming you've got an existing RN project, run the following from the project root:
@@ -50,9 +58,55 @@ module.exports = {
 
 Replace `react-native-package-name` with the name of a real package.
 
-### Reanimated support
+### Adding babel plugins
 
-Reanimated is supported, however you will need to add some options to the addon as follows:
+It's common to provide a babel plugin for certain packages in the react native eco system and you can pass a list of these
+to the addon.
+
+```
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        babelPlugins: ['babel-plugin-name'],
+      },
+    },
+  ],
+};
+```
+
+## Configuring popular libraries
+
+Many libraries work without extra config, heres some examples of config required for some packages.
+
+Note: react-native-vector-icons requires some extra steps due to fonts required and there will be a future addon
+with that config included.
+
+<table>
+<tr>
+<td>Package</td> <td>Required config</td>
+</tr>
+
+<tr>
+<td>react-native-svg</td>
+<td>No extra config needed</td>
+</tr>
+
+<tr>
+<td>react-native-gesture-handler</td>
+<td>No extra config needed</td>
+</tr>
+
+<tr>
+<td>react-native-reanimated</td> 
+<td>
+
+<details>
+<summary>
+Click to here to see the config
+</summary>
 
 ```js
 module.exports = {
@@ -69,7 +123,65 @@ module.exports = {
 };
 ```
 
-This is necessary because reanimated uses a babel plugin to enable certain features of the library.
+</details>
+</td>
+</tr>
+
+<tr>
+<td>native-base</td>
+<td> 
+<details>
+<summary>
+Click to here to see the config
+</summary>
+Due to the vector icons dependency add the following
+
+```js
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        modulesToTranspile: ['react-native-vector-icons'],
+      },
+    },
+  ],
+};
+```
+
+</details>
+</td>
+</tr>
+
+<tr>
+<td>react-native-paper</td>
+<td> 
+<details>
+<summary>
+Click to here to see the config
+</summary>
+Due to the vector icons dependency add the following
+
+```js
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        modulesToTranspile: ['react-native-vector-icons'],
+      },
+    },
+  ],
+};
+```
+
+</details>
+</td>
+</tr>
+
+</table>
 
 ## Known limitations
 
