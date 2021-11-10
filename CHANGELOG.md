@@ -1,3 +1,15 @@
+# v0.0.4 (Wed Nov 10 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.3 (Wed Nov 10 2021)
 
 #### 🐛 Bug Fix
