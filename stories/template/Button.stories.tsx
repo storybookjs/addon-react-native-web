@@ -5,9 +5,6 @@ import { Button } from './Button';
 
 export default {
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
   decorators: [
     (Story) => (
       <View style={{ flex: 1, alignItems: 'flex-start' }}>

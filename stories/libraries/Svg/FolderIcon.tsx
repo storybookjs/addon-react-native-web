@@ -2,12 +2,11 @@ import React from 'react';
 import { Svg, Path } from 'react-native-svg';
 
 interface FolderProps {
-  size: number;
   color: string;
 }
 
-export const FolderIcon = ({ size, color = 'white' }: FolderProps) => (
-  <Svg height={size} width={size}>
+export const FolderIcon = ({ color = 'white' }: FolderProps) => (
+  <Svg height={24} width={24}>
     <Path d='M0 0h24v24H0V0z' fill='none' />
     <Path
       fill={color}
