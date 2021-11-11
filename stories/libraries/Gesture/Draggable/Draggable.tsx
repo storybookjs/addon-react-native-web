@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
     shadowRadius: 1.41,
 
     elevation: 2,
+    ...Platform.select({ web: { cursor: 'grab' }, default: {} }),
   },
   z: {
     zIndex: 999,
