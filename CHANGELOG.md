@@ -1,3 +1,17 @@
+# v0.0.5 (Thu Nov 11 2021)
+
+#### 🐛 Bug Fix
+
+- feat: adjust card story [#6](https://github.com/storybookjs/addon-react-native-web/pull/6) ([@dannyhw](https://github.com/dannyhw))
+- feat: add chromatic github action [#5](https://github.com/storybookjs/addon-react-native-web/pull/5) ([@dannyhw](https://github.com/dannyhw))
+- feat: updated example [#4](https://github.com/storybookjs/addon-react-native-web/pull/4) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.4 (Wed Nov 10 2021)
 
 #### ⚠️ Pushed to `main`
