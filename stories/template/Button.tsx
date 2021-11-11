@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleProp, ViewStyle, TouchableHighlight, Text } from 'react-native';
+import { StyleProp, ViewStyle, TouchableOpacity, Text } from 'react-native';
 
 import styles from './button.styles';
 
@@ -50,8 +50,9 @@ export const Button = ({
   const sizeStyle = styles[size];
   const textSizeStyle = textSizeStyles[size];
   return (
-    <TouchableHighlight
-      underlayColor={primary ? '#1eb1fb' : '#fafafa'}
+    <TouchableOpacity
+      accessibilityRole='button'
+      activeOpacity={0.6}
       style={[
         styles.button,
         modeStyle,
@@ -62,6 +63,6 @@ export const Button = ({
       onPress={onPress}
     >
       <Text style={[textModeStyle, textSizeStyle]}>{label}</Text>
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 };

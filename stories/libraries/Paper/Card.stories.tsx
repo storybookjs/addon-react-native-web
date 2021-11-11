@@ -12,10 +12,6 @@ export default {
       </PaperProvider>
     ),
   ],
-  argTypes: {
-    onCancel: { action: 'onCancel' },
-    onConfirm: { action: 'onConfirm' },
-  },
 } as ComponentMeta<typeof Card>;
 
 export const Basic: ComponentStoryObj<typeof Card> = {

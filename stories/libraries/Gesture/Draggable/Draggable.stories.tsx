@@ -5,8 +5,15 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Draggable } from './Draggable';
 
 export default {
-  title: 'libraries/react-native-gesture-handler/Draggable',
+  title: 'libraries/Gesture Handler/Draggable',
   component: Draggable,
+  render: (args) => {
+    return (
+      <Draggable {...args}>
+        <Text>{args.children}</Text>
+      </Draggable>
+    );
+  },
   decorators: [
     (Story) => (
       <View
@@ -24,6 +31,6 @@ export default {
 
 export const Basic = {
   args: {
-    children: <Text>Drag me around</Text>,
+    children: 'Drag me around',
   },
 };
