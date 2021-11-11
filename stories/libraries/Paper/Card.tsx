@@ -30,7 +30,10 @@ export const Card = ({ title, content, onCancel, onConfirm }: CardProps) => (
     <PaperCard.Content>
       <Paragraph>{content}</Paragraph>
     </PaperCard.Content>
-    <PaperCard.Cover source={{ uri: 'https://picsum.photos/700' }} />
+    <PaperCard.Cover
+      source={{ uri: require('./picture.png') }}
+      resizeMethod='scale'
+    />
     <PaperCard.Actions>
       <Button onPress={onCancel}>Cancel</Button>
       <Button onPress={onConfirm}>Ok</Button>
