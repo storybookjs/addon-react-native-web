@@ -1,3 +1,15 @@
+# v0.0.7 (Mon Nov 15 2021)
+
+#### 🐛 Bug Fix
+
+- fix: ran sb upgrade and fixed peer deps [#11](https://github.com/storybookjs/addon-react-native-web/pull/11) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.6 (Mon Nov 15 2021)
 
 #### 🐛 Bug Fix
