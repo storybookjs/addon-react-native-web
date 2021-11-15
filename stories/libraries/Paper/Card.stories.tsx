@@ -1,15 +1,19 @@
 import React from 'react';
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
-import { Provider as PaperProvider, DefaultTheme } from 'react-native-paper';
+import { StyleSheet, View } from 'react-native';
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { Card } from './Card';
-import { View } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: { width: 480 },
+});
 
 export default {
   component: Card,
 
   render: (args) => (
     <PaperProvider theme={DefaultTheme}>
-      <View style={{ width: 480 }}>
+      <View style={styles.container}>
         <Card {...args} />
       </View>
     </PaperProvider>

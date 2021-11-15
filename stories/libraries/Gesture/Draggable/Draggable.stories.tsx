@@ -1,8 +1,15 @@
 import React from 'react';
 import { ComponentMeta } from '@storybook/react';
 import { StyleSheet, Text, View } from 'react-native';
-
 import { Draggable } from './Draggable';
+
+const styles = StyleSheet.create({
+  container: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default {
   title: 'libraries/Gesture Handler/Draggable',
@@ -16,13 +23,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <View
-        style={{
-          ...StyleSheet.absoluteFillObject,
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
+      <View style={styles.container}>
         <Story />
       </View>
     ),
