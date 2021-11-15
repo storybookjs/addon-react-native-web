@@ -4,11 +4,14 @@ This addon configures `@storybook/react` to display React Native (RN) projects u
 
 - [React Native Web addon for Storybook](#react-native-web-addon-for-storybook)
   - [Getting Started](#getting-started)
+  - [Common issues](#common-issues)
   - [Extra config](#extra-config)
     - [Untranspiled react native libraries](#untranspiled-react-native-libraries)
     - [Adding babel plugins](#adding-babel-plugins)
   - [Configuring popular libraries](#configuring-popular-libraries)
   - [Known limitations](#known-limitations)
+  - [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md)
+
 
 ## Getting Started
 
@@ -29,6 +32,10 @@ module.exports = {
 
 From here, you should be able to write stories incorporating your RN components according to
 the [Storybook for React](https://storybook.js.org/docs/react/get-started/introduction) instructions.
+
+## Common issues
+
+Please see the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md) for common issues like the "loader not found" error.
 
 ## Extra config
 
@@ -188,5 +195,3 @@ module.exports = {
 - Libraries that don't support react-native-web will not work
 - Components will display on the web so may not be the same as a component on a mobile device since dom versions of those components may be used (like `<div>` and `span`)
   - when using primitives such as View/Text or other cross platform components then the difference should be minimal.
-
-See the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md) for more information.
