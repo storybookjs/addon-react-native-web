@@ -12,6 +12,7 @@ This addon configures `@storybook/react` to display React Native (RN) projects u
   - [Known limitations](#known-limitations)
   - [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md)
 
+You can read more about this package [in this blog post](https://www.dannyhwilliams.co.uk/introducing-react-native-web-storybook).
 
 ## Getting Started
 
