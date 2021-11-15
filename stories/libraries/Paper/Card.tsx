@@ -1,10 +1,8 @@
 import React from 'react';
-import { Text } from 'react-native';
 import {
-  Card as PaperCard,
   Avatar,
   Button,
-  Title,
+  Card as PaperCard,
   Paragraph,
 } from 'react-native-paper';
 import { FolderIcon } from '../Svg/FolderIcon';

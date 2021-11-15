@@ -1,13 +1,17 @@
 import { ComponentMeta } from '@storybook/react';
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Button } from './Button';
+
+const styles = StyleSheet.create({
+  container: { flex: 1, alignItems: 'flex-start' },
+});
 
 export default {
   component: Button,
   decorators: [
     (Story) => (
-      <View style={{ flex: 1, alignItems: 'flex-start' }}>
+      <View style={styles.container}>
         <Story />
       </View>
     ),
