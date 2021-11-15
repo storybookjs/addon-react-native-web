@@ -1,4 +1,26 @@
-## Won't the components be different on the web?
+## No loader found for this type of file
+
+I you get this error you are likely using a react native package that has not been transpiled. This is common practice with
+many react native packages. Also make sure to check the configuration section of the [readme](https://github.com/storybookjs/addon-react-native-web/blob/main/README.md#configuring-popular-libraries). If you want to add more packages to that section we're open to all PR's.
+
+To resolve this add that package to the config of the addon like so.
+
+```js
+// main.js
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        modulesToTranspile: ['react-native-package-name'],
+      },
+    },
+  ],
+};
+```
+
+## Won't the compon ents be different on the web?
 
 Basic components like View and Text should remain the same between platforms and library maintainers will generally attempt to keep things as similar as possible.
 
@@ -8,7 +30,7 @@ If you need the components to be accurate to how they would display on the devic
 
 You could even use both addon-react-native-web and @storybook/react-native in the same project. For example you might want to use the web addon to share your ui with stakeholders and the native version to develop on (or whatever suits your needs).
 
-This addon will not take away from storybook/react-native and as the maintainer of both packages I am invested in both solutions. This new addon is intended to solve issues such as sharing being difficult and missing features like the docs addon.
+This addon will not take away from storybook/react-native and development on that package will continue. This new addon is intended to solve issues such as sharing being difficult and missing features like the docs addon.
 
 In the future I see potential for both projects to interact with each other in a similar way that storybook react-native-server does with react native storybook and so I believe there is potential for the two to benefit each other.
 
