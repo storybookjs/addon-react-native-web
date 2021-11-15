@@ -1,3 +1,21 @@
+# v0.0.6 (Mon Nov 15 2021)
+
+#### 🐛 Bug Fix
+
+- docs: move FAQ to the top [#10](https://github.com/storybookjs/addon-react-native-web/pull/10) ([@dannyhw](https://github.com/dannyhw))
+- docs: add FAQ about no loader found error. [#9](https://github.com/storybookjs/addon-react-native-web/pull/9) ([@dannyhw](https://github.com/dannyhw))
+- feat: draggable add grab cursor [#7](https://github.com/storybookjs/addon-react-native-web/pull/7) ([@dannyhw](https://github.com/dannyhw))
+
+#### ⚠️ Pushed to `main`
+
+- docs: add blog post link ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.5 (Thu Nov 11 2021)
 
 #### 🐛 Bug Fix
