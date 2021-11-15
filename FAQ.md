@@ -1,8 +1,7 @@
 ## No loader found for this type of file
 
 If you get this error you are likely using a react native package that has not been transpiled. This is common practice with
-many react native packages. Also make sure to check the configuration section of the [readme](https://github.com/storybookjs/addon-react-native-web/blob/main/README.md#configuring-popular-libraries). If you want to add more packages to that section we're open to all PR's.
-
+many react native packages.
 To resolve this add that package to the config of the addon like so.
 
 ```js
@@ -19,6 +18,8 @@ module.exports = {
   ],
 };
 ```
+
+Also make sure to check the configuration section of the [readme](https://github.com/storybookjs/addon-react-native-web/blob/main/README.md#configuring-popular-libraries). If you want to add more packages to that section we're open to all PR's.
 
 ## Won't the compon ents be different on the web?
 
