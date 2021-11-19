@@ -62,7 +62,12 @@ module.exports = {
         options: {
           presets: [
             '@babel/env',
-            '@babel/preset-react',
+            [
+              '@babel/preset-react',
+              {
+                runtime: 'automatic',
+              },
+            ],
             'module:metro-react-native-babel-preset',
           ],
           plugins: ['@babel/plugin-proposal-class-properties', ...babelPlugins],

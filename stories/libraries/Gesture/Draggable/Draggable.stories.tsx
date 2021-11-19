@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentMeta } from '@storybook/react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Draggable } from './Draggable';

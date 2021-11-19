@@ -8,7 +8,7 @@ import {
   Strong,
   UL,
 } from '@expo/html-elements';
-import React from 'react';
+
 import { View, Text } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
 

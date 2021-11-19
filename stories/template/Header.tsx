@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Button } from './Button';
 import styles from './header.styles';
 import { H1, Header as HeaderView } from '@expo/html-elements';
