@@ -87,8 +87,12 @@ module.exports = {
       options: {
         root,
         presets: [
-          '@babel/env',
-          'module:metro-react-native-babel-preset',
+          [
+            'module:metro-react-native-babel-preset',
+            {
+              useTransformReactJSXExperimental: true,
+            },
+          ],
           [
             '@babel/preset-react',
             {
