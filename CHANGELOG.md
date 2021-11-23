@@ -1,3 +1,15 @@
+# v0.0.8 (Tue Nov 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix: use automatic runtime and fix for mono repos [#13](https://github.com/storybookjs/addon-react-native-web/pull/13) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.7 (Mon Nov 15 2021)
 
 #### 🐛 Bug Fix
