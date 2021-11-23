@@ -56,7 +56,7 @@ module.exports = {
 
     const babelPlugins = getBabelPlugins(options);
     const root = options?.projectRoot ?? process.cwd();
-    const modules = [...DEFAULT_INCLUDES, ...options.modulesToTranspile];
+    const modules = [...DEFAULT_INCLUDES, ...(options.modulesToTranspile || [])];
 
     // fix for uncompiled react-native dependencies
     config.module.rules.push({
