@@ -1,3 +1,15 @@
+# v0.0.10 (Tue Nov 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix: allow for empty options [#16](https://github.com/storybookjs/addon-react-native-web/pull/16) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.9 (Tue Nov 23 2021)
 
 #### 🐛 Bug Fix
