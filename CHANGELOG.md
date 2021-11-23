@@ -1,3 +1,15 @@
+# v0.0.9 (Tue Nov 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix crash if modulesToTranspile undefined [#15](https://github.com/storybookjs/addon-react-native-web/pull/15) ([@adblanc](https://github.com/adblanc))
+
+#### Authors: 1
+
+- Blanc Adrien ([@adblanc](https://github.com/adblanc))
+
+---
+
 # v0.0.8 (Tue Nov 23 2021)
 
 #### 🐛 Bug Fix
