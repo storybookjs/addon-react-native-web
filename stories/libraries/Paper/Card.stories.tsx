@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import { StyleSheet, View } from 'react-native';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';

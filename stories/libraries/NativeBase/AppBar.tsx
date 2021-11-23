@@ -1,5 +1,5 @@
 import { Box, HStack, Icon, IconButton, StatusBar, Text } from 'native-base';
-import React from 'react';
+
 import { FavoriteIcon } from '../Svg/FavoriteIcon';
 import { MenuIcon } from '../Svg/MenuIcon';
 import { MoreIcon } from '../Svg/MoreIcon';
