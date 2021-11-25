@@ -1,3 +1,17 @@
+# v0.0.11 (Thu Nov 25 2021)
+
+#### 🐛 Bug Fix
+
+- fix: unexpected token '.' on project root [#18](https://github.com/storybookjs/addon-react-native-web/pull/18) ([@lacsinagramar](https://github.com/lacsinagramar) [@dannyhw](https://github.com/dannyhw))
+- feat: run chromatic action on PRs [#19](https://github.com/storybookjs/addon-react-native-web/pull/19) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 2
+
+- [@lacsinagramar](https://github.com/lacsinagramar)
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.10 (Tue Nov 23 2021)
 
 #### 🐛 Bug Fix
