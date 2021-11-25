@@ -19,7 +19,7 @@ You can read more about this package [in this blog post](https://www.dannyhwilli
 Assuming you've got an existing RN project, run the following from the project root:
 
 ```sh
-npx sb@next init --type react
+npx sb init --type react
 yarn add react-dom react-native-web babel-plugin-react-native-web @storybook/addon-react-native-web --dev
 ```
 
