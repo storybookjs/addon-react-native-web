@@ -1,3 +1,16 @@
+# v0.0.12 (Thu Nov 25 2021)
+
+#### 🐛 Bug Fix
+
+- docs: don't suggest @next version in readme [#21](https://github.com/storybookjs/addon-react-native-web/pull/21) ([@dannyhw](https://github.com/dannyhw))
+- fix: use target for running action [#20](https://github.com/storybookjs/addon-react-native-web/pull/20) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.11 (Thu Nov 25 2021)
 
 #### 🐛 Bug Fix
