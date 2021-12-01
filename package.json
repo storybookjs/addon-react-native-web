@@ -50,10 +50,10 @@
     "@babel/runtime": "^7.12.5",
     "@expo/html-elements": "^0.0.2",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@storybook/addon-actions": "^6.4.1",
-    "@storybook/addon-essentials": "6.4.1",
-    "@storybook/addon-links": "^6.4.1",
-    "@storybook/react": "6.4.1",
+    "@storybook/addon-actions": "^6.4.3",
+    "@storybook/addon-essentials": "6.4.3",
+    "@storybook/addon-links": "^6.4.3",
+    "@storybook/react": "6.4.3",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.65.0",
     "@types/react-native-vector-icons": "^6.4.8",
@@ -120,5 +120,6 @@
       "react-native"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
-  }
+  },
+  "dependencies": {}
 }

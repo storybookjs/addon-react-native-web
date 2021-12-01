@@ -1,6 +1,19 @@
 import webpack from 'webpack';
-import { getBabelPlugins, Options } from './common';
 import path from 'path';
+
+export type Options = {
+  modulesToTranspile?: string[];
+  babelPlugins?: string[];
+  projectRoot?: string;
+};
+
+export const getBabelPlugins = (options: Options) => {
+  let reactNativeWeb = 'react-native-web';
+  if (options.babelPlugins && Array.isArray(options.babelPlugins)) {
+    return [reactNativeWeb, ...options.babelPlugins];
+  }
+  return [reactNativeWeb];
+};
 
 const getModule = (name: string) => path.join('node_modules', name);
 
