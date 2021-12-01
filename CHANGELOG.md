@@ -1,3 +1,15 @@
+# v0.0.13 (Wed Dec 01 2021)
+
+#### 🐛 Bug Fix
+
+- Feat/typescript and module fix [#23](https://github.com/storybookjs/addon-react-native-web/pull/23) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.12 (Thu Nov 25 2021)
 
 #### 🐛 Bug Fix
