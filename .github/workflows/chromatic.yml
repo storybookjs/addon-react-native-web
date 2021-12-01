@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - master
-  pull_request_target:
+  pull_request:
 
 # List of jobs
 jobs:
@@ -20,6 +20,8 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
+      - name: build project
+        run: yarn build
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
         uses: chromaui/action@v1
@@ -27,4 +29,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: c9eb9dda8699
