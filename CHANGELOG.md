@@ -1,3 +1,15 @@
+# v0.0.14 (Fri Dec 03 2021)
+
+#### 🐛 Bug Fix
+
+- fix: prioritise .web.(jsx|ts|tsx) extension if available [#24](https://github.com/storybookjs/addon-react-native-web/pull/24) ([@intergalacticspacehighway](https://github.com/intergalacticspacehighway))
+
+#### Authors: 1
+
+- Nishan ([@intergalacticspacehighway](https://github.com/intergalacticspacehighway))
+
+---
+
 # v0.0.13 (Wed Dec 01 2021)
 
 #### 🐛 Bug Fix
