@@ -106,7 +106,12 @@ const webpackFinal = async (config: any, options: Options) => {
     },
   });
 
-  config.resolve.extensions = ['.web.js', ...config.resolve.extensions];
+  config.resolve.extensions = [
+    '.web.js',
+    '.web.jsx',
+    '.web.ts',
+    '.web.tsx',
+    ...config.resolve.extensions];
 
   return config;
 };
