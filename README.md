@@ -14,6 +14,8 @@ This addon configures `@storybook/react` to display React Native (RN) projects u
 
 You can read more about this package [in this blog post](https://www.dannyhwilliams.co.uk/introducing-react-native-web-storybook).
 
+To contribute see the contributing guide [here](https://github.com/storybookjs/addon-react-native-web/blob/main/CONTRIBUTING.md)
+
 ## Getting Started
 
 Assuming you've got an existing RN project, run the following from the project root:
