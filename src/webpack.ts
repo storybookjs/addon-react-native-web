@@ -55,6 +55,9 @@ const webpackFinal = async (config: any, options: Options) => {
     }),
   );
 
+  // plugin suggested in reanimated docs https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/web-support/
+  config.plugins.push(new webpack.DefinePlugin({ process: { env: {} } }));
+
   const babelPlugins = getBabelPlugins(options);
   const root = options.projectRoot ?? process.cwd();
   const userModules = options.modulesToTranspile?.map(getModule) ?? [];
@@ -111,7 +114,8 @@ const webpackFinal = async (config: any, options: Options) => {
     '.web.jsx',
     '.web.ts',
     '.web.tsx',
-    ...config.resolve.extensions];
+    ...config.resolve.extensions,
+  ];
 
   return config;
 };
