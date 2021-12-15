@@ -16,6 +16,10 @@ You can read more about this package [in this blog post](https://www.dannyhwilli
 
 To contribute see the contributing guide [here](https://github.com/storybookjs/addon-react-native-web/blob/main/CONTRIBUTING.md)
 
+Heres a screen shot of you could use this alongside storybook/react-native, the image is taken from the following [starter code](https://github.com/dannyhw/expo-storybook-starter)
+
+![image with storybook on mobile and web](https://user-images.githubusercontent.com/3481514/145904252-92e3dc1e-591f-410f-88a1-b4250f4ba6f2.png)
+
 ## Getting Started
 
 Assuming you've got an existing RN project, run the following from the project root:
