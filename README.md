@@ -40,14 +40,10 @@ the [Storybook for React](https://storybook.js.org/docs/react/get-started/introd
 
 Please see the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md) for common issues like the "loader not found" error.
 
-## Extra config
+## Config options
 
 Most packages should work without extra changes however in some cases extra steps are needed.
-
 One common example is "reanimated" which requires some babel config and extra transpilation.
-
-Config options
-
 
 Options | Type | Description
 ---------|----------|---------
