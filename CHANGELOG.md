@@ -1,3 +1,15 @@
+# v0.0.16 (Wed Dec 15 2021)
+
+#### 🐛 Bug Fix
+
+- docs: specify configuration options [#28](https://github.com/storybookjs/addon-react-native-web/pull/28) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.15 (Wed Dec 15 2021)
 
 #### 🐛 Bug Fix
