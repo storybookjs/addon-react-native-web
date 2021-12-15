@@ -46,6 +46,15 @@ Most packages should work without extra changes however in some cases extra step
 
 One common example is "reanimated" which requires some babel config and extra transpilation.
 
+Config options
+
+
+Options | Type | Description
+---------|----------|---------
+ modulesToTranspile | `Array<string>` | node_modules that need transpiling
+ babelPlugins | `Array<string>` | Babel plugins you want to apply
+ projectRoot | `string` | Path to the root of your project, if in a mono repo you might need to set this.  
+
 ### Untranspiled react native libraries
 
 Many react-native packages are shipped untranspiled and this doesn't work for the web platform. If you receive errors like "proper loader not found" after adding a package try adding it to the `modulesToTranspile` option for this addon.
