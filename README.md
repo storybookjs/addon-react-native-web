@@ -16,6 +16,10 @@ You can read more about this package [in this blog post](https://www.dannyhwilli
 
 To contribute see the contributing guide [here](https://github.com/storybookjs/addon-react-native-web/blob/main/CONTRIBUTING.md)
 
+Heres a screen shot of you could use this alongside storybook/react-native, the image is taken from the following [starter code](https://github.com/dannyhw/expo-storybook-starter)
+
+![image with storybook on mobile and web](https://user-images.githubusercontent.com/3481514/145904252-92e3dc1e-591f-410f-88a1-b4250f4ba6f2.png)
+
 ## Getting Started
 
 Assuming you've got an existing RN project, run the following from the project root:
@@ -40,11 +44,16 @@ the [Storybook for React](https://storybook.js.org/docs/react/get-started/introd
 
 Please see the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md) for common issues like the "loader not found" error.
 
-## Extra config
+## Config options
 
 Most packages should work without extra changes however in some cases extra steps are needed.
-
 One common example is "reanimated" which requires some babel config and extra transpilation.
+
+Options | Type | Description
+---------|----------|---------
+ modulesToTranspile | `Array<string>` | node_modules that need transpiling
+ babelPlugins | `Array<string>` | Babel plugins you want to apply
+ projectRoot | `string` | Path to the root of your project, if in a mono repo you might need to set this.  
 
 ### Untranspiled react native libraries
 
