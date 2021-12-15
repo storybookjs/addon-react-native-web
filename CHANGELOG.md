@@ -1,3 +1,19 @@
+# v0.0.15 (Wed Dec 15 2021)
+
+#### 🐛 Bug Fix
+
+- fix: add the suggested process.env plugin to the config [#27](https://github.com/storybookjs/addon-react-native-web/pull/27) ([@dannyhw](https://github.com/dannyhw))
+
+#### 📝 Documentation
+
+- Create CONTRIBUTING.md [#25](https://github.com/storybookjs/addon-react-native-web/pull/25) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.14 (Fri Dec 03 2021)
 
 #### 🐛 Bug Fix
