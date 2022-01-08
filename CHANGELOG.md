@@ -1,3 +1,16 @@
+# v0.0.17 (Sat Jan 08 2022)
+
+#### 🐛 Bug Fix
+
+- feat: add example for gradient [#31](https://github.com/storybookjs/addon-react-native-web/pull/31) (danny@Daniels-MBP.lan [@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 2
+
+- Daniel Williams (danny@Daniels-MBP.lan)
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.16 (Wed Dec 15 2021)
 
 #### 🐛 Bug Fix
