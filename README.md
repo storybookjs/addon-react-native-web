@@ -78,7 +78,7 @@ module.exports = {
 
 ### Aliasing react native web libraries
 
-Some react-native packages recommend module aliasing as a means of importing and using the web variant of an existing package. If you need to add additional key:value pairs to webpack's config.resolve.alias, use the `modulesToAlias` option for this addon.
+Some react-native packages recommend module aliasing as a means of importing and using the web variant of an existing package. If you need to add additional key:value pairs to webpack's `config.resolve.alias`, use the `modulesToAlias` option for this addon.
 
 You can do that like this:
 
