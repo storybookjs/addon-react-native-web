@@ -3,6 +3,7 @@ import path from 'path';
 
 export type Options = {
   modulesToTranspile?: string[];
+  modulesToAlias?: { [key: string]: string };
   babelPlugins?: string[];
   projectRoot?: string;
 };
@@ -61,6 +62,7 @@ const webpackFinal = async (config: any, options: Options) => {
   const babelPlugins = getBabelPlugins(options);
   const root = options.projectRoot ?? process.cwd();
   const userModules = options.modulesToTranspile?.map(getModule) ?? [];
+  const userAliases = options.modulesToAlias ?? [];
   const modules = [...DEFAULT_INCLUDES, ...userModules];
 
   // fix for uncompiled react-native dependencies
@@ -117,6 +119,11 @@ const webpackFinal = async (config: any, options: Options) => {
     ...config.resolve.extensions,
   ];
 
+
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    ...userAliases
+  }
   return config;
 };
 
