@@ -52,7 +52,7 @@ One common example is "reanimated" which requires some babel config and extra tr
 Options | Type | Description
 ---------|----------|---------
  modulesToTranspile | `Array<string>` | node_modules that need transpiling
- modulesToAlias | `{[key: string]: string}` node_modules that need aliasing
+ modulesToAlias | `{[key: string]: string}` | node_modules that need aliasing
  babelPlugins | `Array<string>` | Babel plugins you want to apply
  projectRoot | `string` | Path to the root of your project, if in a mono repo you might need to set this.
 
