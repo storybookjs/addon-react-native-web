@@ -52,8 +52,9 @@ One common example is "reanimated" which requires some babel config and extra tr
 Options | Type | Description
 ---------|----------|---------
  modulesToTranspile | `Array<string>` | node_modules that need transpiling
+ modulesToAlias | `{[key: string]: string}` node_modules that need aliasing
  babelPlugins | `Array<string>` | Babel plugins you want to apply
- projectRoot | `string` | Path to the root of your project, if in a mono repo you might need to set this.  
+ projectRoot | `string` | Path to the root of your project, if in a mono repo you might need to set this.
 
 ### Untranspiled react native libraries
 
@@ -69,6 +70,26 @@ module.exports = {
       name: '@storybook/addon-react-native-web',
       options: {
         modulesToTranspile: ['react-native-package-name'],
+      },
+    },
+  ],
+};
+```
+
+### Aliasing react native web libraries
+
+Some react-native packages recommend module aliasing as a means of importing and using the web variant of an existing package. If you need to add additional key:value pairs to webpack's config.resolve.alias, use the `modulesToAlias` option for this addon.
+
+You can do that like this:
+
+```js
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        modulesToAlias: {'react-native-package-name': 'react-native-web-package-name'},
       },
     },
   ],
@@ -119,7 +140,7 @@ with that config included.
 </tr>
 
 <tr>
-<td>react-native-reanimated</td> 
+<td>react-native-reanimated</td>
 <td>
 
 <details>
@@ -148,7 +169,7 @@ module.exports = {
 
 <tr>
 <td>native-base</td>
-<td> 
+<td>
 <details>
 <summary>
 Click to here to see the config
@@ -175,7 +196,7 @@ module.exports = {
 
 <tr>
 <td>react-native-paper</td>
-<td> 
+<td>
 <details>
 <summary>
 Click to here to see the config

@@ -62,8 +62,8 @@ const webpackFinal = async (config: any, options: Options) => {
   const babelPlugins = getBabelPlugins(options);
   const root = options.projectRoot ?? process.cwd();
   const userModules = options.modulesToTranspile?.map(getModule) ?? [];
-  const userAliases = options.modulesToAlias ?? [];
   const modules = [...DEFAULT_INCLUDES, ...userModules];
+  const userAliases = options.modulesToAlias ?? {};
 
   // fix for uncompiled react-native dependencies
   config.module.rules.push({
