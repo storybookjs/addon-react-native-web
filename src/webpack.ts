@@ -3,6 +3,7 @@ import path from 'path';
 
 export type Options = {
   modulesToTranspile?: string[];
+  modulesToAlias?: { [key: string]: string };
   babelPlugins?: string[];
   projectRoot?: string;
 };
@@ -40,11 +41,6 @@ const DEFAULT_EXCLUDES = [
 ];
 
 const webpackFinal = async (config: any, options: Options) => {
-  // swap out react-native for react-native-web
-  config.resolve.alias = {
-    'react-native$': 'react-native-web',
-  };
-
   // Add __DEV__ global variable which is relied on by many libraries
   config.plugins.push(
     new webpack.DefinePlugin({
@@ -62,6 +58,7 @@ const webpackFinal = async (config: any, options: Options) => {
   const root = options.projectRoot ?? process.cwd();
   const userModules = options.modulesToTranspile?.map(getModule) ?? [];
   const modules = [...DEFAULT_INCLUDES, ...userModules];
+  const userAliases = options.modulesToAlias ?? {};
 
   // fix for uncompiled react-native dependencies
   config.module.rules.push({
@@ -117,6 +114,11 @@ const webpackFinal = async (config: any, options: Options) => {
     ...config.resolve.extensions,
   ];
 
+  config.resolve.alias = {
+    'react-native$': 'react-native-web',
+    ...config.resolve.alias,
+    ...userAliases,
+  };
   return config;
 };
 

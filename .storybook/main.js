@@ -11,6 +11,7 @@ module.exports = {
           'react-native-reanimated',
           'react-native-vector-icons',
         ],
+        modulesToAlias: { 'victory-native': 'victory' },
         babelPlugins: ['react-native-reanimated/plugin'],
       },
     },
