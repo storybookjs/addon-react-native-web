@@ -5,18 +5,20 @@ This addon configures `@storybook/react` to display React Native (RN) projects u
 - [React Native Web addon for Storybook](#react-native-web-addon-for-storybook)
   - [Getting Started](#getting-started)
   - [Common issues](#common-issues)
-  - [Extra config](#extra-config)
+  - [Config options](#config-options)
     - [Untranspiled react native libraries](#untranspiled-react-native-libraries)
+    - [Aliasing react native web libraries](#aliasing-react-native-web-libraries)
     - [Adding babel plugins](#adding-babel-plugins)
   - [Configuring popular libraries](#configuring-popular-libraries)
   - [Known limitations](#known-limitations)
-  - [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md)
+
+See the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md) for common questions.
 
 You can read more about this package [in this blog post](https://www.dannyhwilliams.co.uk/introducing-react-native-web-storybook).
 
 To contribute see the contributing guide [here](https://github.com/storybookjs/addon-react-native-web/blob/main/CONTRIBUTING.md)
 
-Heres a screen shot of you could use this alongside storybook/react-native, the image is taken from the following [starter code](https://github.com/dannyhw/expo-storybook-starter)
+Heres a screen shot of how you could use this alongside storybook/react-native, the image is taken from the following [starter code](https://github.com/dannyhw/expo-storybook-starter)
 
 ![image with storybook on mobile and web](https://user-images.githubusercontent.com/3481514/145904252-92e3dc1e-591f-410f-88a1-b4250f4ba6f2.png)
 
@@ -49,12 +51,12 @@ Please see the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/
 Most packages should work without extra changes however in some cases extra steps are needed.
 One common example is "reanimated" which requires some babel config and extra transpilation.
 
-Options | Type | Description
----------|----------|---------
- modulesToTranspile | `Array<string>` | node_modules that need transpiling
- modulesToAlias | `{[key: string]: string}` | node_modules that need aliasing
- babelPlugins | `Array<string>` | Babel plugins you want to apply
- projectRoot | `string` | Path to the root of your project, if in a mono repo you might need to set this.
+| Options            | Type                      | Description                                                                     |
+| ------------------ | ------------------------- | ------------------------------------------------------------------------------- |
+| modulesToTranspile | `Array<string>`           | node_modules that need transpiling                                              |
+| modulesToAlias     | `{[key: string]: string}` | node_modules that need aliasing                                                 |
+| babelPlugins       | `Array<string>`           | Babel plugins you want to apply                                                 |
+| projectRoot        | `string`                  | Path to the root of your project, if in a mono repo you might need to set this. |
 
 ### Untranspiled react native libraries
 
@@ -78,7 +80,7 @@ module.exports = {
 
 ### Aliasing react native web libraries
 
-Some react-native packages recommend module aliasing as a means of importing and using the web variant of an existing package. If you need to add additional key:value pairs to webpack's `config.resolve.alias`, use the `modulesToAlias` option for this addon.
+Some react-native packages recommend module aliasing as a means of importing and using the web variant of an existing package. If you need to add additional key:value pairs to webpack's `config.resolve.alias`, use the `modulesToAlias` option for this addon. You don't need to add react-native-web to this list as it is already included by default.
 
 You can do that like this:
 
@@ -89,7 +91,9 @@ module.exports = {
     {
       name: '@storybook/addon-react-native-web',
       options: {
-        modulesToAlias: {'react-native-package-name': 'react-native-web-package-name'},
+        modulesToAlias: {
+          'react-native-package-name': 'react-native-web-package-name',
+        },
       },
     },
   ],
@@ -103,7 +107,7 @@ Replace `react-native-package-name` with the name of a real package.
 It's common to provide a babel plugin for certain packages in the react native eco system and you can pass a list of these
 to the addon.
 
-```
+```js
 module.exports = {
   addons: [
     /*existing addons,*/

@@ -119,11 +119,10 @@ const webpackFinal = async (config: any, options: Options) => {
     ...config.resolve.extensions,
   ];
 
-
   config.resolve.alias = {
     ...config.resolve.alias,
-    ...userAliases
-  }
+    ...userAliases,
+  };
   return config;
 };
 
