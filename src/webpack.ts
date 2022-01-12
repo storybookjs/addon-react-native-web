@@ -41,11 +41,6 @@ const DEFAULT_EXCLUDES = [
 ];
 
 const webpackFinal = async (config: any, options: Options) => {
-  // swap out react-native for react-native-web
-  config.resolve.alias = {
-    'react-native$': 'react-native-web',
-  };
-
   // Add __DEV__ global variable which is relied on by many libraries
   config.plugins.push(
     new webpack.DefinePlugin({
@@ -120,6 +115,7 @@ const webpackFinal = async (config: any, options: Options) => {
   ];
 
   config.resolve.alias = {
+    'react-native$': 'react-native-web',
     ...config.resolve.alias,
     ...userAliases,
   };
