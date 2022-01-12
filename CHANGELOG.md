@@ -1,3 +1,16 @@
+# v0.0.18 (Wed Jan 12 2022)
+
+#### 🐛 Bug Fix
+
+- Add modulesToAlias option [#32](https://github.com/storybookjs/addon-react-native-web/pull/32) ([@adamhari](https://github.com/adamhari) [@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 2
+
+- Adam Hari ([@adamhari](https://github.com/adamhari))
+- Danny ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.17 (Sat Jan 08 2022)
 
 #### 🐛 Bug Fix
