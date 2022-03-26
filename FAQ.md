@@ -21,7 +21,7 @@ module.exports = {
 
 Also make sure to check the configuration section of the [readme](https://github.com/storybookjs/addon-react-native-web/blob/main/README.md#configuring-popular-libraries). If you want to add more packages to that section we're open to all PR's.
 
-## Won't the compon ents be different on the web?
+## Won't the components be different on the web?
 
 Basic components like View and Text should remain the same between platforms and library maintainers will generally attempt to keep things as similar as possible.
 
