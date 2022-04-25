@@ -62,7 +62,7 @@
     "babel-jest": "^28.0.0",
     "babel-loader": "^8.2.5",
     "babel-plugin-react-native-web": "^0.17.7",
-    "boxen": "^6.2.1",
+    "boxen": "^5.0.1",
     "chromatic": "^6.5.4",
     "concurrently": "^7.1.0",
     "dedent": "^0.7.0",
