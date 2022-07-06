@@ -227,6 +227,53 @@ module.exports = {
 
 </table>
 
+## Adding support for static assets and svgs
+
+```js
+module.exports = {
+  addons: [
+    /*existing addons,*/
+  ],
+  staticDirs: ['<path_to_assets>'],
+  webpackFinal: async (config) => {
+    const fileLoaderRule = config.module.rules.find(
+      (rule) => rule.test && rule.test.test('.svg')
+    );
+    fileLoaderRule.exclude = /\.svg$/;
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack', 'url-loader'],
+    });
+
+    return config;
+  },
+};
+```
+
+## Adding support for webpack 5
+
+```js
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+
+module.exports = {
+  addons: [
+    /*existing addons,*/
+  ],
+  core: {
+    builder: 'webpack5'
+  },
+  webpackFinal: async (config) => {
+    // Webpack 5 stops polyfilling Node and you need some of them for react native modules
+    config.plugins.push(
+      new NodePolyfillPlugin()
+    )
+
+    return config;
+  },
+};
+```
+
 ## Known limitations
 
 - Libraries that don't support react-native-web will not work
