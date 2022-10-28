@@ -1,3 +1,17 @@
+# v0.0.19 (Fri Oct 28 2022)
+
+#### 🐛 Bug Fix
+
+- chore: update deps [#37](https://github.com/storybookjs/addon-react-native-web/pull/37) ([@dannyhw](https://github.com/dannyhw))
+- Update FAQ.md [#35](https://github.com/storybookjs/addon-react-native-web/pull/35) ([@vkiranmaniya](https://github.com/vkiranmaniya))
+
+#### Authors: 2
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Kiran Maniya ([@vkiranmaniya](https://github.com/vkiranmaniya))
+
+---
+
 # v0.0.18 (Wed Jan 12 2022)
 
 #### 🐛 Bug Fix
