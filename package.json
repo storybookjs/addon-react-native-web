@@ -1,6 +1,6 @@
 {
   "name": "@storybook/addon-react-native-web",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Configure React storybook for react-native-web",
   "author": "Daniel Williams",
   "keywords": [
