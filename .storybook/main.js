@@ -17,11 +17,10 @@ module.exports = {
     },
     '@storybook/addon-essentials',
   ],
-  features: {
-    babelModeV7: true,
+  framework: '@storybook/react',
+  core: {
+    builder: {
+      name: 'webpack5',
+    },
   },
-  babel: (options) => ({
-    ...options,
-    presets: [...options.presets, '@babel/preset-typescript'],
-  }),
 };
