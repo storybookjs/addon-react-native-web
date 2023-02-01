@@ -119,6 +119,7 @@ const webpackFinal = async (config: any, options: Options) => {
     ...config.resolve.alias,
     ...userAliases,
   };
+
   return config;
 };
 

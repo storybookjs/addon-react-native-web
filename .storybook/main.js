@@ -17,10 +17,29 @@ module.exports = {
     },
     '@storybook/addon-essentials',
   ],
-  framework: '@storybook/react',
   core: {
-    builder: {
-      name: 'webpack5',
+    builder: 'webpack5',
+  },
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: { fastRefresh: true },
+  },
+  typescript: {
+    check: false,
+    checkOptions: {},
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      // speeds up storybook build time
+      allowSyntheticDefaultImports: false,
+      // speeds up storybook build time
+      esModuleInterop: false,
+      // makes union prop types like variant and size appear as select controls
+      shouldExtractLiteralValuesFromEnum: true,
+      // makes string and boolean types that can be undefined appear as inputs and switches
+      shouldRemoveUndefinedFromOptional: true,
     },
+  },
+  docs: {
+    autodocs: true,
   },
 };
