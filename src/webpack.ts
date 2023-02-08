@@ -102,7 +102,11 @@ const webpackFinal = async (config: any, options: Options) => {
           },
         ],
       ],
-      plugins: [...babelPlugins, '@babel/plugin-proposal-class-properties'],
+      plugins: [
+        ...babelPlugins,
+        '@babel/plugin-proposal-class-properties',
+        '@babel/plugin-proposal-export-namespace-from',
+      ],
     },
   });
 
