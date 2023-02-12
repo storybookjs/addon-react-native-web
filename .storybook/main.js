@@ -17,9 +17,6 @@ module.exports = {
     },
     '@storybook/addon-essentials',
   ],
-  core: {
-    builder: 'webpack5',
-  },
   framework: {
     name: '@storybook/react-webpack5',
     options: { fastRefresh: true },
