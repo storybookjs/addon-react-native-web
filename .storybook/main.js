@@ -3,27 +3,22 @@ module.exports = {
     '../stories/**/*.stories.mdx',
     '../stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: [
-    {
-      name: '../preset.js',
-      options: {
-        modulesToTranspile: [
-          'react-native-reanimated',
-          'react-native-vector-icons',
-        ],
-        modulesToAlias: { 'victory-native': 'victory' },
-        babelPlugins: ['react-native-reanimated/plugin'],
-      },
-    },
-    '@storybook/addon-essentials',
-  ],
-  core: {
-    builder: 'webpack5',
-  },
   framework: {
-    name: '@storybook/react-webpack5',
-    options: { fastRefresh: true },
+    name: './',
+    options: {
+      fastRrefresh: true,
+      modulesToTranspile: [
+        'react-native-reanimated',
+        'react-native-vector-icons',
+      ],
+      modulesToAlias: { 'victory-native': 'victory' },
+      babelPlugins: ['react-native-reanimated/plugin'],
+    },
   },
+  addons: ['@storybook/addon-essentials'],
+  // core: {
+  //   builder: 'webpack5',
+  // },
   typescript: {
     check: false,
     checkOptions: {},

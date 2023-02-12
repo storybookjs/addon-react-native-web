@@ -40,7 +40,11 @@ const DEFAULT_EXCLUDES = [
   '(webpack)',
 ];
 
-const webpackFinal = async (config: any, options: Options) => {
+const webpackFinal = async (
+  config: any,
+  inputOptions: { frameworkOptions: { options: Options } },
+) => {
+  const { options } = inputOptions.frameworkOptions;
   // Add __DEV__ global variable which is relied on by many libraries
   config.plugins.push(
     new webpack.DefinePlugin({
