@@ -1,3 +1,19 @@
+# v0.0.20 (Fri Mar 31 2023)
+
+#### 🐛 Bug Fix
+
+- storybook v7 [#53](https://github.com/storybookjs/addon-react-native-web/pull/53) ([@natsuki-ornikar](https://github.com/natsuki-ornikar) [@dannyhw](https://github.com/dannyhw) [@shilman](https://github.com/shilman) [@JReinhold](https://github.com/JReinhold))
+- docs: add metro babel preset [#56](https://github.com/storybookjs/addon-react-native-web/pull/56) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 4
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Jeppe Reinhold ([@JReinhold](https://github.com/JReinhold))
+- Michael Shilman ([@shilman](https://github.com/shilman))
+- Natalie Rouvière ([@natsuki-ornikar](https://github.com/natsuki-ornikar))
+
+---
+
 # v0.0.19 (Fri Oct 28 2022)
 
 #### 🐛 Bug Fix
