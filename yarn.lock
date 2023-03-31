@@ -3326,7 +3326,7 @@
     remark-slug "^6.0.0"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-essentials@^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0":
+"@storybook/addon-essentials@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-7.0.0.tgz#04ad2f81c8eba3c664320ad6d8cb02e10bd3093e"
   integrity sha512-eKX/9BPqAnzY2XhnjX7T6iu2SGKCSwCQrbxZt5j+8K9QwcskpiQB7XAwZKTnKr7DVALDaYEeGsTFQKfNzaQW0Q==
@@ -3912,7 +3912,7 @@
   resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-7.0.0.tgz#9bb1e57cc60e70bb151879c1c615aca71671270f"
   integrity sha512-oMCkYYVbDaNMolnzObYvHuWNLUGC87osJmjjT3l+zugVUETDM/oDrvbAyzDucCJDea2ZCfxQHxYkhY6R+MQxHA==
 
-"@storybook/react-webpack5@^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0":
+"@storybook/react-webpack5@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/react-webpack5/-/react-webpack5-7.0.0.tgz#7bab209e5081e30842693170ea375286eef975c6"
   integrity sha512-po+oPRg4B3sHufbcNbzTYAnwFl0FyJMtjlBiROvXuORpgVQijz9rTMLGDf9oSWb8f4zxvVyqTq1P56q7bUy4Hw==
@@ -3922,7 +3922,7 @@
     "@storybook/react" "7.0.0"
     "@types/node" "^16.0.0"
 
-"@storybook/react@7.0.0", "@storybook/react@^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0":
+"@storybook/react@7.0.0", "@storybook/react@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.0.0.tgz#b409d926eb9c2e5a8f6400bb0c97d03055360cad"
   integrity sha512-JvLpm9DsDdVPEfg0I5O7so9PgRJa4eqJH5bZLgdtUXyzLWj6d0woa1uz/BqDHEXk5AveNipmTcqxTOZ0SWw2jw==
@@ -12814,7 +12814,7 @@ store2@^2.14.2:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.14.2.tgz#56138d200f9fe5f582ad63bc2704dbc0e4a45068"
   integrity sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==
 
-"storybook@^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0":
+storybook@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/storybook/-/storybook-7.0.0.tgz#ab80e46c01e341a5a557fe7aecc7f8b458b432f1"
   integrity sha512-sZamiYhd2lzQ2A+UIlkUlc6/i8TiNCcCUBmpTiN6qlbBPId5Gji1XdDTqgiuaKLTFnLU/1DBTS1a2ndGI1fIKw==
