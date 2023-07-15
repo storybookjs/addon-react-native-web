@@ -1,3 +1,19 @@
+# v0.0.21 (Sat Jul 15 2023)
+
+#### 🐛 Bug Fix
+
+- fix: namespace from babel plugin shouldnt be required [#67](https://github.com/storybookjs/addon-react-native-web/pull/67) ([@dannyhw](https://github.com/dannyhw))
+- Update chromatic-comment.yml [#66](https://github.com/storybookjs/addon-react-native-web/pull/66) ([@dannyhw](https://github.com/dannyhw))
+- Feat/storybook-link-comment [#64](https://github.com/storybookjs/addon-react-native-web/pull/64) ([@natsuki-ornikar](https://github.com/natsuki-ornikar) [@dannyhw](https://github.com/dannyhw) [@shilman](https://github.com/shilman))
+
+#### Authors: 3
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Michael Shilman ([@shilman](https://github.com/shilman))
+- Natalie Rouvière ([@natsuki-ornikar](https://github.com/natsuki-ornikar))
+
+---
+
 # v0.0.20 (Fri Mar 31 2023)
 
 #### 🐛 Bug Fix
