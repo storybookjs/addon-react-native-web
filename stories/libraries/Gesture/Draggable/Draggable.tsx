@@ -1,16 +1,10 @@
-import React, { ReactNode, useRef } from 'react';
+import { ReactNode } from 'react';
 import { Platform, StyleProp, StyleSheet, ViewStyle } from 'react-native';
-import {
-  PanGestureHandler,
-  PanGestureHandlerGestureEvent,
-  TapGestureHandler,
-} from 'react-native-gesture-handler';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
-  useAnimatedGestureHandler,
   useAnimatedStyle,
   useSharedValue,
   withSpring,
-  withTiming,
 } from 'react-native-reanimated';
 
 type DraggableProps = {
@@ -18,98 +12,50 @@ type DraggableProps = {
   children?: ReactNode | ReactNode[];
 };
 
-type ContextType = {
-  x: number;
-  y: number;
-};
-
 export const Draggable = ({ children, style }: DraggableProps) => {
-  const x = useSharedValue(0);
-  const y = useSharedValue(0);
-  const tapActive = useSharedValue(false);
-  const panActive = useSharedValue(false);
-  const tapRef = useRef();
-  const panRef = useRef();
+  const Xposition = useSharedValue(0);
+  const Yposition = useSharedValue(0);
+  const scale = useSharedValue(1);
 
-  const endPan = () => {
-    'worklet';
-    panActive.value = false;
-  };
+  const panGesture = Gesture.Pan()
+    .onUpdate((e) => {
+      Xposition.value = e.translationX;
+      Yposition.value = e.translationY;
+      scale.value = withSpring(1.2);
+    })
+    .onEnd((_e) => {
+      Xposition.value = withSpring(0);
+      Yposition.value = withSpring(0);
+      scale.value = withSpring(1);
+    });
 
-  const endTap = () => {
-    'worklet';
-    tapActive.value = false;
-  };
+  const tapGesture = Gesture.Tap()
+    .onTouchesDown(() => {
+      scale.value = withSpring(1.2);
+    })
+    .onTouchesUp(() => {
+      scale.value = withSpring(1);
+    });
 
-  const panGestureEvent = useAnimatedGestureHandler<
-    PanGestureHandlerGestureEvent,
-    ContextType
-  >({
-    onStart: (_, context) => {
-      context.x = x.value;
-      context.y = y.value;
-      panActive.value = true;
-    },
-    onActive: (event, context) => {
-      x.value = event.translationX + context.x;
-      y.value = event.translationY + context.y;
-    },
-    onEnd: () => {
-      x.value = withSpring(0);
-      y.value = withSpring(0);
-      endPan();
-    },
-    onFinish: endPan,
-    onCancel: endPan,
-    onFail: endPan,
-  });
-
-  const panStyle = Platform.select({
-    android: { transform: [] }, // currently useanimated style is crashing for android
-    default: useAnimatedStyle(() => {
-      return {
-        transform: [
-          { scale: withTiming(tapActive.value || panActive.value ? 1.2 : 1) },
-          {
-            translateX: x.value,
-          },
-          {
-            translateY: y.value,
-          },
-        ],
-      };
-    }, [x, y, tapActive, panActive]),
-  });
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [
+      { translateX: Xposition.value },
+      { translateY: Yposition.value },
+      { scale: scale.value },
+    ],
+  }));
 
   return (
-    <PanGestureHandler
-      ref={panRef}
-      onGestureEvent={panGestureEvent}
-      simultaneousHandlers={tapRef}
-    >
-      <Animated.View style={styles.z}>
-        <TapGestureHandler
-          simultaneousHandlers={panRef}
-          ref={tapRef}
-          onBegan={() => {
-            tapActive.value = true;
-          }}
-          onEnded={endTap}
-          onFailed={endTap}
-          onCancelled={endTap}
-        >
-          <Animated.View style={[styles.box, panStyle, style]}>
-            {children}
-          </Animated.View>
-        </TapGestureHandler>
+    <GestureDetector gesture={Gesture.Simultaneous(panGesture, tapGesture)}>
+      <Animated.View style={[styles.box, animatedStyle, style]}>
+        {children}
       </Animated.View>
-    </PanGestureHandler>
+    </GestureDetector>
   );
 };
 
 const styles = StyleSheet.create({
   box: {
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     shadowColor: '#000',
@@ -122,10 +68,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 1.41,
 
+    zIndex: 999,
     elevation: 2,
     ...Platform.select({ web: { cursor: 'grab' }, default: {} }),
-  },
-  z: {
-    zIndex: 999,
   },
 });
