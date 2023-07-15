@@ -10,3 +10,11 @@ export const parameters = {
     source: { excludeDecorators: true },
   },
 };
+
+export const decorators = [
+  (Story) => (
+    <GestureHandlerRootView>
+      <Story />
+    </GestureHandlerRootView>
+  ),
+];

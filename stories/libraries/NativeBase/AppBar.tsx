@@ -1,14 +1,14 @@
-import { Box, HStack, Icon, IconButton, StatusBar, Text } from 'native-base';
+// import { Box, HStack, Icon, IconButton, StatusBar, Text } from 'native-base';
 
-import { FavoriteIcon } from '../Svg/FavoriteIcon';
-import { MenuIcon } from '../Svg/MenuIcon';
-import { MoreIcon } from '../Svg/MoreIcon';
-import { SearchIcon } from '../Svg/SearchIcon';
+// import { FavoriteIcon } from '../Svg/FavoriteIcon';
+// import { MenuIcon } from '../Svg/MenuIcon';
+// import { MoreIcon } from '../Svg/MoreIcon';
+// import { SearchIcon } from '../Svg/SearchIcon';
 
 export function AppBar() {
   return (
     <>
-      <StatusBar bg='#3700B3' barStyle='light-content' />
+      {/* <StatusBar bg='#3700B3' barStyle='light-content' />
       <Box safeAreaTop bg='#6200ee' />
       <HStack
         bg='#6200ee'
@@ -32,7 +32,7 @@ export function AppBar() {
           <IconButton icon={<Icon as={SearchIcon} color='white' size='lg' />} />
           <IconButton icon={<Icon as={MoreIcon} size='lg' color='white' />} />
         </HStack>
-      </HStack>
+      </HStack> */}
     </>
   );
 }
