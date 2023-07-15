@@ -160,7 +160,10 @@ module.exports = {
       name: '@storybook/addon-react-native-web',
       options: {
         modulesToTranspile: ['react-native-reanimated'],
-        babelPlugins: ['react-native-reanimated/plugin'],
+        babelPlugins: [
+          '@babel/plugin-proposal-export-namespace-from',
+          'react-native-reanimated/plugin',
+        ],
       },
     },
   ],
