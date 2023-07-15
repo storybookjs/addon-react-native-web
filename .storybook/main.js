@@ -12,7 +12,10 @@ module.exports = {
           'react-native-vector-icons',
         ],
         modulesToAlias: { 'victory-native': 'victory' },
-        babelPlugins: ['react-native-reanimated/plugin'],
+        babelPlugins: [
+          '@babel/plugin-proposal-export-namespace-from',
+          'react-native-reanimated/plugin',
+        ],
       },
     },
     '@storybook/addon-essentials',
