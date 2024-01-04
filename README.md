@@ -28,7 +28,7 @@ Assuming you've got an existing RN project, run the following from the project r
 
 ```sh
 npx sb init --type react
-yarn add react-dom react-native-web babel-plugin-react-native-web @storybook/addon-react-native-web metro-react-native-babel-preset --dev
+yarn add react-dom react-native-web babel-plugin-react-native-web @storybook/addon-react-native-web @react-native/babel-preset --dev
 ```
 
 Then edit your `.storybook/main.js`:

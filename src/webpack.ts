@@ -90,7 +90,7 @@ const webpackFinal = async (config: any, options: Options) => {
       root,
       presets: [
         [
-          'module:metro-react-native-babel-preset',
+          'module:@react-native/babel-preset',
           {
             useTransformReactJSXExperimental: true,
           },
@@ -102,7 +102,7 @@ const webpackFinal = async (config: any, options: Options) => {
           },
         ],
       ],
-      plugins: [...babelPlugins, '@babel/plugin-proposal-class-properties'],
+      plugins: [...babelPlugins],
     },
   });
 
