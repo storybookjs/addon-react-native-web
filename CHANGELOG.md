@@ -1,3 +1,21 @@
+# v0.0.22 (Sun Jan 07 2024)
+
+#### 🐛 Bug Fix
+
+- Update to use updated babel preset package name in react native 73. [#78](https://github.com/storybookjs/addon-react-native-web/pull/78) ([@joarkosberg](https://github.com/joarkosberg) [@dannyhw](https://github.com/dannyhw))
+- docs: reanimated example config [#68](https://github.com/storybookjs/addon-react-native-web/pull/68) ([@dannyhw](https://github.com/dannyhw))
+
+#### ⚠️ Pushed to `main`
+
+- fix: use node 18 ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 2
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Joar ([@joarkosberg](https://github.com/joarkosberg))
+
+---
+
 # v0.0.21 (Sat Jul 15 2023)
 
 #### 🐛 Bug Fix
