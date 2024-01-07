@@ -40,6 +40,31 @@ const DEFAULT_EXCLUDES = [
   '(webpack)',
 ];
 
+const isInstalled = (name: string) => {
+  try {
+    require(`${name}/package.json`);
+    return true;
+  } catch (er) {
+    return false;
+  }
+};
+
+const getRnPreset = () => {
+  if (isInstalled('@react-native/babel-preset')) {
+    console.log('Using @react-native/babel-preset');
+
+    return 'module:@react-native/babel-preset';
+  } else if (isInstalled('metro-react-native-babel-preset')) {
+    console.log('Using metro-react-native-babel-preset');
+
+    return 'module:metro-react-native-babel-preset';
+  } else {
+    throw new Error(
+      "Couldn't find babel-preset-react-native or metro-react-native-babel-preset.",
+    );
+  }
+};
+
 const webpackFinal = async (config: any, options: Options) => {
   // Add __DEV__ global variable which is relied on by many libraries
   config.plugins.push(
@@ -90,7 +115,7 @@ const webpackFinal = async (config: any, options: Options) => {
       root,
       presets: [
         [
-          'module:metro-react-native-babel-preset',
+          getRnPreset(),
           {
             useTransformReactJSXExperimental: true,
           },
@@ -102,7 +127,7 @@ const webpackFinal = async (config: any, options: Options) => {
           },
         ],
       ],
-      plugins: [...babelPlugins, '@babel/plugin-proposal-class-properties'],
+      plugins: [...babelPlugins],
     },
   });
 
