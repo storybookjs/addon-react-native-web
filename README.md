@@ -10,6 +10,8 @@ This addon configures `@storybook/react` to display React Native (RN) projects u
     - [Aliasing react native web libraries](#aliasing-react-native-web-libraries)
     - [Adding babel plugins](#adding-babel-plugins)
   - [Configuring popular libraries](#configuring-popular-libraries)
+  - [Adding support for static assets and svgs](#adding-support-for-static-assets-and-svgs)
+  - [Node polyfills for webpack 5](#node-polyfills-for-webpack-5)
   - [Known limitations](#known-limitations)
 
 See the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/main/FAQ.md) for common questions.
@@ -232,17 +234,21 @@ module.exports = {
 
 ## Adding support for static assets and svgs
 
+Install `@svgr/webpack` and `url-loader`
+
 ```js
 module.exports = {
-  addons: [
-    /*existing addons,*/
-  ],
+  /*existing config*/
+  // to provide a public export for assets
   staticDirs: ['<path_to_assets>'],
   webpackFinal: async (config) => {
     const fileLoaderRule = config.module.rules.find(
-      (rule) => rule.test && rule.test.test('.svg')
+      (rule) => rule.test && rule.test.test('.svg'),
     );
-    fileLoaderRule.exclude = /\.svg$/;
+
+    if (fileLoaderRule) {
+      fileLoaderRule.exclude = /\.svg$/;
+    }
 
     config.module.rules.push({
       test: /\.svg$/,
@@ -254,23 +260,20 @@ module.exports = {
 };
 ```
 
-## Adding support for webpack 5
+## Node polyfills for webpack 5
+
+install `node-polyfill-webpack-plugin`
 
 ```js
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = {
-  addons: [
-    /*existing addons,*/
-  ],
+  /*existing config*/
   core: {
-    builder: 'webpack5'
+    builder: 'webpack5',
   },
   webpackFinal: async (config) => {
-    // Webpack 5 stops polyfilling Node and you need some of them for react native modules
-    config.plugins.push(
-      new NodePolyfillPlugin()
-    )
+    config.plugins.push(new NodePolyfillPlugin());
 
     return config;
   },
