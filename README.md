@@ -28,7 +28,7 @@ Assuming you've got an existing RN project, run the following from the project r
 
 ```sh
 npx sb init --type react
-yarn add react-dom react-native-web babel-plugin-react-native-web @storybook/addon-react-native-web --dev
+yarn add react-dom react-native-web babel-plugin-react-native-web @storybook/addon-react-native-web @react-native/babel-preset --dev
 ```
 
 Then edit your `.storybook/main.js`:
@@ -160,7 +160,10 @@ module.exports = {
       name: '@storybook/addon-react-native-web',
       options: {
         modulesToTranspile: ['react-native-reanimated'],
-        babelPlugins: ['react-native-reanimated/plugin'],
+        babelPlugins: [
+          '@babel/plugin-proposal-export-namespace-from',
+          'react-native-reanimated/plugin',
+        ],
       },
     },
   ],

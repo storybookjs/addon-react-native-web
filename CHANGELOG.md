@@ -1,3 +1,67 @@
+# v0.0.22 (Sun Jan 07 2024)
+
+#### 🐛 Bug Fix
+
+- Update to use updated babel preset package name in react native 73. [#78](https://github.com/storybookjs/addon-react-native-web/pull/78) ([@joarkosberg](https://github.com/joarkosberg) [@dannyhw](https://github.com/dannyhw))
+- docs: reanimated example config [#68](https://github.com/storybookjs/addon-react-native-web/pull/68) ([@dannyhw](https://github.com/dannyhw))
+
+#### ⚠️ Pushed to `main`
+
+- fix: use node 18 ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 2
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Joar ([@joarkosberg](https://github.com/joarkosberg))
+
+---
+
+# v0.0.21 (Sat Jul 15 2023)
+
+#### 🐛 Bug Fix
+
+- fix: namespace from babel plugin shouldnt be required [#67](https://github.com/storybookjs/addon-react-native-web/pull/67) ([@dannyhw](https://github.com/dannyhw))
+- Update chromatic-comment.yml [#66](https://github.com/storybookjs/addon-react-native-web/pull/66) ([@dannyhw](https://github.com/dannyhw))
+- Feat/storybook-link-comment [#64](https://github.com/storybookjs/addon-react-native-web/pull/64) ([@natsuki-ornikar](https://github.com/natsuki-ornikar) [@dannyhw](https://github.com/dannyhw) [@shilman](https://github.com/shilman))
+
+#### Authors: 3
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Michael Shilman ([@shilman](https://github.com/shilman))
+- Natalie Rouvière ([@natsuki-ornikar](https://github.com/natsuki-ornikar))
+
+---
+
+# v0.0.20 (Fri Mar 31 2023)
+
+#### 🐛 Bug Fix
+
+- storybook v7 [#53](https://github.com/storybookjs/addon-react-native-web/pull/53) ([@natsuki-ornikar](https://github.com/natsuki-ornikar) [@dannyhw](https://github.com/dannyhw) [@shilman](https://github.com/shilman) [@JReinhold](https://github.com/JReinhold))
+- docs: add metro babel preset [#56](https://github.com/storybookjs/addon-react-native-web/pull/56) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 4
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Jeppe Reinhold ([@JReinhold](https://github.com/JReinhold))
+- Michael Shilman ([@shilman](https://github.com/shilman))
+- Natalie Rouvière ([@natsuki-ornikar](https://github.com/natsuki-ornikar))
+
+---
+
+# v0.0.19 (Fri Oct 28 2022)
+
+#### 🐛 Bug Fix
+
+- chore: update deps [#37](https://github.com/storybookjs/addon-react-native-web/pull/37) ([@dannyhw](https://github.com/dannyhw))
+- Update FAQ.md [#35](https://github.com/storybookjs/addon-react-native-web/pull/35) ([@vkiranmaniya](https://github.com/vkiranmaniya))
+
+#### Authors: 2
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Kiran Maniya ([@vkiranmaniya](https://github.com/vkiranmaniya))
+
+---
+
 # v0.0.18 (Wed Jan 12 2022)
 
 #### 🐛 Bug Fix

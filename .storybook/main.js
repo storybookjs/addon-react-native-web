@@ -12,16 +12,34 @@ module.exports = {
           'react-native-vector-icons',
         ],
         modulesToAlias: { 'victory-native': 'victory' },
-        babelPlugins: ['react-native-reanimated/plugin'],
+        babelPlugins: [
+          '@babel/plugin-proposal-export-namespace-from',
+          'react-native-reanimated/plugin',
+        ],
       },
     },
     '@storybook/addon-essentials',
   ],
-  features: {
-    babelModeV7: true,
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: { fastRefresh: true },
   },
-  babel: (options) => ({
-    ...options,
-    presets: [...options.presets, '@babel/preset-typescript'],
-  }),
+  typescript: {
+    check: false,
+    checkOptions: {},
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      // speeds up storybook build time
+      allowSyntheticDefaultImports: false,
+      // speeds up storybook build time
+      esModuleInterop: false,
+      // makes union prop types like variant and size appear as select controls
+      shouldExtractLiteralValuesFromEnum: true,
+      // makes string and boolean types that can be undefined appear as inputs and switches
+      shouldRemoveUndefinedFromOptional: true,
+    },
+  },
+  docs: {
+    autodocs: true,
+  },
 };
