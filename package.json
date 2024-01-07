@@ -99,6 +99,7 @@
   "peerDependencies": {
     "@babel/preset-react": "*",
     "@react-native/babel-preset": "*",
+    "metro-react-native-babel-preset": "*",
     "babel-plugin-react-native-web": "*",
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
@@ -108,6 +109,12 @@
       "optional": true
     },
     "react-dom": {
+      "optional": true
+    },
+    "@react-native/babel-preset": {
+      "optional": true
+    },
+    "metro-react-native-babel-preset": {
       "optional": true
     }
   },
