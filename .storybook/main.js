@@ -1,4 +1,5 @@
-module.exports = {
+/** @type{import("@storybook/react-webpack5").StorybookConfig} */
+export default {
   stories: [
     '../stories/**/*.stories.mdx',
     '../stories/**/*.stories.@(js|jsx|ts|tsx)',
