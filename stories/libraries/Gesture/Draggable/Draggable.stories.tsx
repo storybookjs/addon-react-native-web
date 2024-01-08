@@ -1,12 +1,17 @@
-import { ComponentMeta } from '@storybook/react';
+import { Meta } from '@storybook/react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Draggable } from './Draggable';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  fill: {
+    // @ts-ignore
+    height: '50vh',
   },
 });
 
@@ -15,19 +20,19 @@ export default {
   component: Draggable,
   render: (args) => {
     return (
-      <Draggable {...args}>
-        <Text>{args.children}</Text>
-      </Draggable>
+      <GestureHandlerRootView style={styles.fill}>
+        <View style={styles.container}>
+          <Draggable {...args}>
+            <Text>{args.children}</Text>
+          </Draggable>
+        </View>
+      </GestureHandlerRootView>
     );
   },
-  decorators: [
-    (Story) => (
-      <View style={styles.container}>
-        <Story />
-      </View>
-    ),
-  ],
-} as ComponentMeta<typeof Draggable>;
+  parameters: {
+    layout: 'fullscreen',
+  },
+} satisfies Meta<typeof Draggable>;
 
 export const Basic = {
   args: {
