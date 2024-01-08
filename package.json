@@ -51,9 +51,9 @@
     "@babel/runtime": "^7.20.13",
     "@expo/html-elements": "^0.2.0",
     "@react-native-community/eslint-config": "^3.1.0",
-    "@storybook/addon-essentials": "^7.0.0",
-    "@storybook/react": "^7.0.0",
-    "@storybook/react-webpack5": "^7.0.0",
+    "@storybook/addon-essentials": "~7.5",
+    "@storybook/react": "~7.5",
+    "@storybook/react-webpack5": "~7.5",
     "@types/jest": "^27.4.1",
     "@types/react-native-vector-icons": "^6.4.12",
     "@types/react-test-renderer": "^18.0.0",
@@ -69,7 +69,7 @@
     "eslint": "^8.14.0",
     "eslint-plugin-ft-flow": "^2.0.3",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-storybook": "^0.6.6",
+    "eslint-plugin-storybook": "^0.6.15",
     "expo-linear-gradient": "^11.4.0",
     "jest": "^28.0.0",
     "@react-native/babel-preset": "^0.73.18",
@@ -89,7 +89,7 @@
     "react-native-web": "^0.18.9",
     "react-test-renderer": "18.1.0",
     "rimraf": "^3.0.2",
-    "storybook": "^7.0.0",
+    "storybook": "~7.5",
     "typescript": "^4.9.5",
     "victory": "^36.6.8",
     "victory-native": "^36.6.8",
@@ -127,5 +127,8 @@
       "react-native"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
   }
 }
