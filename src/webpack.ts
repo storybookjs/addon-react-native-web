@@ -5,6 +5,7 @@ export type Options = {
   modulesToTranspile?: string[];
   modulesToAlias?: { [key: string]: string };
   babelPlugins?: string[];
+  babelPresetReactOptions?: { [key: string]: string };
   projectRoot?: string;
 };
 
@@ -80,6 +81,7 @@ const webpackFinal = async (config: any, options: Options) => {
   config.plugins.push(new webpack.DefinePlugin({ process: { env: {} } }));
 
   const babelPlugins = getBabelPlugins(options);
+  const babelPresetReactOptions = options?.babelPresetReactOptions
   const root = options.projectRoot ?? process.cwd();
   const userModules = options.modulesToTranspile?.map(getModule) ?? [];
   const modules = [...DEFAULT_INCLUDES, ...userModules];
@@ -124,6 +126,7 @@ const webpackFinal = async (config: any, options: Options) => {
           '@babel/preset-react',
           {
             runtime: 'automatic',
+            ...babelPresetReactOptions
           },
         ],
       ],
