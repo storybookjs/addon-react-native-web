@@ -62,7 +62,10 @@ export default {
           },
         },
       ],
-      include: path.resolve(__dirname, '../'),
+      include: [
+        path.resolve(__dirname, '../stories/nativewind'),
+        path.resolve(__dirname, './'),
+      ],
     });
 
     return {
