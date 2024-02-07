@@ -233,6 +233,40 @@ module.exports = {
 </td>
 </tr>
 
+<tr>
+<td>nativewind</td>
+<td>
+<details>
+<summary>
+Click to here to see the config
+</summary>
+Nativewind requires some additional babel config to work correctly. You can see an example of this config below.
+
+```js
+module.exports = {
+  addons: [
+    /*existing addons,*/
+    {
+      name: '@storybook/addon-react-native-web',
+      options: {
+        modulesToTranspile: [
+          'react-native-reanimated',
+          'nativewind',
+          'react-native-css-interop',
+        ],
+        babelPresets: ['nativewind/babel'],
+        babelPresetReactOptions: { jsxImportSource: 'nativewind' },
+        babelPlugins: ['react-native-reanimated/plugin'],
+      },
+    },
+  ],
+};
+```
+
+</details>
+</td>
+</tr>
+
 </table>
 
 ## Adding support for static assets and svgs
