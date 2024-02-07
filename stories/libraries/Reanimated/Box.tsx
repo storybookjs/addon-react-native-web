@@ -31,6 +31,7 @@ export const Box = () => {
     <View style={styles.container}>
       <Animated.View style={[styles.box, animatedStyles]} />
       <Button
+        color={'purple'}
         onPress={() => {
           offset.value = Math.random();
         }}

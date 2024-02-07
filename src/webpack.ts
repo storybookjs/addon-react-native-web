@@ -4,7 +4,10 @@ import path from 'path';
 export type Options = {
   modulesToTranspile?: string[];
   modulesToAlias?: { [key: string]: string };
-  babelPlugins?: string[];
+  babelPlugins?: Array<string | [string, Record<string, string>]>;
+  babelPresets?: Array<string | [string, Record<string, string>]>;
+  babelPresetReactOptions?: Record<string, any>;
+  babelPresetReactNativeOptions?: Record<string, any>;
   projectRoot?: string;
 };
 
@@ -80,6 +83,10 @@ const webpackFinal = async (config: any, options: Options) => {
   config.plugins.push(new webpack.DefinePlugin({ process: { env: {} } }));
 
   const babelPlugins = getBabelPlugins(options);
+  const babelPresetReactOptions = options?.babelPresetReactOptions ?? {};
+  const babelPresetReactNativeOptions =
+    options?.babelPresetReactNativeOptions ?? {};
+  const babelPresets = options?.babelPresets ?? [];
   const root = options.projectRoot ?? process.cwd();
   const userModules = options.modulesToTranspile?.map(getModule) ?? [];
   const modules = [...DEFAULT_INCLUDES, ...userModules];
@@ -118,14 +125,17 @@ const webpackFinal = async (config: any, options: Options) => {
           getRnPreset(),
           {
             useTransformReactJSXExperimental: true,
+            ...babelPresetReactNativeOptions,
           },
         ],
         [
           '@babel/preset-react',
           {
             runtime: 'automatic',
+            ...babelPresetReactOptions,
           },
         ],
+        ...babelPresets,
       ],
       plugins: [...babelPlugins],
     },

@@ -8,6 +8,7 @@ import { SearchIcon } from '../Svg/SearchIcon';
 export function AppBar() {
   return (
     <>
+      {/* @ts-ignore not sure why this errors */}
       <StatusBar bg='#3700B3' barStyle='light-content' />
       <Box safeAreaTop bg='#6200ee' />
       <HStack

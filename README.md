@@ -53,12 +53,15 @@ Please see the [FAQ](https://github.com/storybookjs/addon-react-native-web/blob/
 Most packages should work without extra changes however in some cases extra steps are needed.
 One common example is "reanimated" which requires some babel config and extra transpilation.
 
-| Options            | Type                      | Description                                                                     |
-| ------------------ | ------------------------- | ------------------------------------------------------------------------------- |
-| modulesToTranspile | `Array<string>`           | node_modules that need transpiling                                              |
-| modulesToAlias     | `{[key: string]: string}` | node_modules that need aliasing                                                 |
-| babelPlugins       | `Array<string>`           | Babel plugins you want to apply                                                 |
-| projectRoot        | `string`                  | Path to the root of your project, if in a mono repo you might need to set this. |
+| Options                       | Type                                                | Description                                                                     |
+| ----------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------- |
+| modulesToTranspile            | `Array<string>`                                     | node_modules that need transpiling                                              |
+| modulesToAlias                | `{[key: string]: string}`                           | node_modules that need aliasing                                                 |
+| babelPlugins                  | `Array<string \| [string, Record<string, string>]>` | Babel plugins you want to apply                                                 |
+| projectRoot                   | `string`                                            | Path to the root of your project, if in a mono repo you might need to set this. |
+| babelPresets                  | `Array<string \| [string, Record<string, string>]>` | Babel presets you want to apply                                                 |
+| babelPresetReactOptions       | `Record<string, any>`                               | Options to pass options to @babel/preset-react                                  |
+| babelPresetReactNativeOptions | `Record<string, any>`                               | Options to pass options to @react-native/babel-preset                           |
 
 ### Untranspiled react native libraries
 

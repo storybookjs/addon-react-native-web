@@ -1,4 +1,4 @@
-import { ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { View, StyleSheet } from 'react-native';
 import { Button } from './Button';
@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   container: { flex: 1, alignItems: 'flex-start' },
 });
 
-export default {
+const meta = {
   component: Button,
   decorators: [
     (Story) => (
@@ -16,29 +16,33 @@ export default {
       </View>
     ),
   ],
-} as ComponentMeta<typeof Button>;
+} satisfies Meta<typeof Button>;
 
-export const Primary = {
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {
   args: {
     primary: true,
     label: 'Button',
   },
 };
 
-export const Secondary = {
+export const Secondary: Story = {
   args: {
     label: 'Button',
   },
 };
 
-export const Large = {
+export const Large: Story = {
   args: {
     size: 'large',
     label: 'Button',
   },
 };
 
-export const Small = {
+export const Small: Story = {
   args: {
     size: 'small',
     label: 'Button',

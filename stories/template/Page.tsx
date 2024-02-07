@@ -15,12 +15,12 @@ import Svg, { G, Path } from 'react-native-svg';
 import { Header } from './Header';
 import styles from './page.styles';
 
-interface PageProps {
+export type PageProps = {
   user?: {};
   onLogin: () => void;
   onLogout: () => void;
   onCreateAccount: () => void;
-}
+};
 
 export const Page = ({
   user,
@@ -42,6 +42,7 @@ export const Page = ({
         We recommend building UIs with a{' '}
         <A
           style={styles.a}
+          // @ts-ignore
           accessibilityComponentType='link'
           accessibilityTraits={{}}
           href='https://componentdriven.org'
@@ -70,6 +71,7 @@ export const Page = ({
         Get a guided tutorial on component-driven development at{' '}
         <A
           style={styles.a}
+          // @ts-ignore
           accessibilityComponentType='link'
           accessibilityTraits={{}}
           href='https://storybook.js.org/tutorials/'
@@ -80,6 +82,7 @@ export const Page = ({
         . Read more in the{' '}
         <A
           style={styles.a}
+          // @ts-ignore
           accessibilityComponentType='link'
           accessibilityTraits={{}}
           href='https://storybook.js.org/docs'

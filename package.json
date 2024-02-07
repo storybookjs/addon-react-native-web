@@ -27,7 +27,7 @@
     "buildBabel": "concurrently \"yarn buildBabel:cjs\" \"yarn buildBabel:esm\"",
     "buildBabel:cjs": "babel ./src -d ./dist/cjs --extensions \".js,.jsx,.ts,.tsx\"",
     "buildBabel:esm": "babel ./src -d ./dist/esm --env-name esm --extensions \".js,.jsx,.ts,.tsx\"",
-    "buildTsc": "tsc --declaration --emitDeclarationOnly --outDir ./dist/ts",
+    "buildTsc": "tsc -p tsconfig.prod.json --declaration --emitDeclarationOnly --outDir ./dist/ts",
     "prebuild": "yarn clean",
     "build": "concurrently \"yarn buildBabel\" \"yarn buildTsc\"",
     "build:watch": "concurrently \"yarn buildBabel:esm -- --watch\" \"yarn buildTsc -- --watch\"",
@@ -37,7 +37,8 @@
     "prerelease": "zx scripts/prepublish-checks.mjs",
     "release": "yarn build && auto shipit",
     "eject-ts": "zx scripts/eject-typescript.mjs",
-    "chromatic": "npx chromatic --project-token=c9eb9dda8699"
+    "chromatic": "npx chromatic --project-token=c9eb9dda8699",
+    "check": "tsc --noEmit"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
@@ -50,12 +51,13 @@
     "@expo/html-elements": "^0.5.1",
     "@react-native-community/eslint-config": "^3.2.0",
     "@react-native/babel-preset": "^0.73.19",
-    "@storybook/addon-essentials": "^7.6.9",
-    "@storybook/addon-mdx-gfm": "^7.6.9",
-    "@storybook/react": "^7.6.9",
-    "@storybook/react-webpack5": "^7.6.9",
+    "@storybook/addon-essentials": "^7.6.13",
+    "@storybook/addon-mdx-gfm": "^7.6.13",
+    "@storybook/react": "^7.6.13",
+    "@storybook/react-webpack5": "^7.6.13",
     "@types/react-native-vector-icons": "^6.4.18",
     "auto": "^10.36.5",
+    "autoprefixer": "^10.4.17",
     "babel-loader": "^9.1.3",
     "babel-plugin-react-docgen-typescript": "^1.5.1",
     "babel-plugin-react-native-web": "^0.19.10",
@@ -69,11 +71,14 @@
     "eslint-plugin-storybook": "^0.6.15",
     "expo-linear-gradient": "^12.5.0",
     "native-base": "^3.4.28",
+    "nativewind": "^4.0.1",
     "normalize-css-color": "^1.0.2",
+    "postcss-import": "^16.0.0",
+    "postcss-loader": "^8.1.0",
     "prettier": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-native": "^0.73.1",
+    "react-native": "^0.73.4",
     "react-native-gesture-handler": "^2.14.0",
     "react-native-paper": "^5.11.7",
     "react-native-reanimated": "^3.6.1",
@@ -83,10 +88,9 @@
     "react-native-vector-icons": "^10.0.3",
     "react-native-web": "^0.19.10",
     "rimraf": "^5.0.5",
-    "storybook": "^7.6.9",
+    "storybook": "^7.6.13",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
-    "victory": "^36.7.0",
-    "victory-native": "^40.0.3",
     "webpack": "^5.89.0",
     "zx": "^6.1.0"
   },
@@ -122,5 +126,5 @@
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.0"
 }

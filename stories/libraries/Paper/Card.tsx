@@ -10,12 +10,12 @@ const LeftContent = (props: any) => (
   <Avatar.Icon {...props} icon={FolderIcon} />
 );
 
-interface CardProps {
+export type CardProps = {
   title: string;
   content: string;
   onCancel: () => void;
   onConfirm: () => void;
-}
+};
 
 export const Card = ({ title, content, onCancel, onConfirm }: CardProps) => (
   <PaperCard>
