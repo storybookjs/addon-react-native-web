@@ -2,7 +2,7 @@ import { StyleProp, ViewStyle, TouchableOpacity, Text } from 'react-native';
 
 import styles from './button.styles';
 
-interface ButtonProps {
+type ButtonProps = {
   /**
    * Is this the principal call to action on the page?
    */
@@ -24,7 +24,7 @@ interface ButtonProps {
    */
   onPress?: () => void;
   style?: StyleProp<ViewStyle>;
-}
+};
 
 const textSizeStyles = {
   small: styles.smallText,

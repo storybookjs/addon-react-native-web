@@ -7,15 +7,15 @@
     "experimentalDecorators": true,
     "incremental": false,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "lib": ["es2017", "dom"],
     "module": "commonjs",
     "noImplicitAny": true,
-    "rootDir": "./",
+    "rootDir": "./src",
     "skipLibCheck": true,
     "target": "es5",
     "strict": true,
     "outDir": "dist"
   },
-  "include": ["src/**/*", "nativewind-env.d.ts", "stories/**/*"]
+  "include": ["src/**/*"]
 }

@@ -1,8 +1,8 @@
 import { Svg, Path } from 'react-native-svg';
 
-interface FolderProps {
+export type FolderProps = {
   color: string;
-}
+};
 
 export const FolderIcon = ({ color = 'white' }: FolderProps) => (
   <Svg height={24} width={24}>

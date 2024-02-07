@@ -27,7 +27,7 @@
     "buildBabel": "concurrently \"yarn buildBabel:cjs\" \"yarn buildBabel:esm\"",
     "buildBabel:cjs": "babel ./src -d ./dist/cjs --extensions \".js,.jsx,.ts,.tsx\"",
     "buildBabel:esm": "babel ./src -d ./dist/esm --env-name esm --extensions \".js,.jsx,.ts,.tsx\"",
-    "buildTsc": "tsc --declaration --emitDeclarationOnly --outDir ./dist/ts",
+    "buildTsc": "tsc -p tsconfig.prod.json --declaration --emitDeclarationOnly --outDir ./dist/ts",
     "prebuild": "yarn clean",
     "build": "concurrently \"yarn buildBabel\" \"yarn buildTsc\"",
     "build:watch": "concurrently \"yarn buildBabel:esm -- --watch\" \"yarn buildTsc -- --watch\"",
@@ -37,7 +37,8 @@
     "prerelease": "zx scripts/prepublish-checks.mjs",
     "release": "yarn build && auto shipit",
     "eject-ts": "zx scripts/eject-typescript.mjs",
-    "chromatic": "npx chromatic --project-token=c9eb9dda8699"
+    "chromatic": "npx chromatic --project-token=c9eb9dda8699",
+    "check": "tsc --noEmit"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
@@ -90,8 +91,6 @@
     "storybook": "^7.6.13",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
-    "victory": "^36.7.0",
-    "victory-native": "^40.0.3",
     "webpack": "^5.89.0",
     "zx": "^6.1.0"
   },

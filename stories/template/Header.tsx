@@ -4,12 +4,12 @@ import { H1, Header as HeaderView } from '@expo/html-elements';
 import { View } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
 
-interface HeaderProps {
+export type HeaderProps = {
   user?: {};
   onLogin: () => void;
   onLogout: () => void;
   onCreateAccount: () => void;
-}
+};
 
 export const Header = ({
   user,

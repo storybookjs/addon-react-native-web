@@ -1,4 +1,4 @@
-import { ComponentMeta } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 import { View, StyleSheet } from 'react-native';
 import { Button } from './Button';
@@ -16,7 +16,7 @@ export default {
       </View>
     ),
   ],
-} as ComponentMeta<typeof Button>;
+} as Meta<typeof Button>;
 
 export const Primary = {
   args: {
