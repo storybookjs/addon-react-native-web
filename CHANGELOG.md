@@ -1,3 +1,20 @@
+# v0.0.23 (Wed Feb 07 2024)
+
+#### 🐛 Bug Fix
+
+- Update webpack.ts for NativeWind v4 [#81](https://github.com/storybookjs/addon-react-native-web/pull/81) ([@panzacoder](https://github.com/panzacoder) [@dannyhw](https://github.com/dannyhw))
+- chore: update sb version and yarn [#79](https://github.com/storybookjs/addon-react-native-web/pull/79) ([@dannyhw](https://github.com/dannyhw))
+- chore/update versions again [#80](https://github.com/storybookjs/addon-react-native-web/pull/80) ([@dannyhw](https://github.com/dannyhw))
+- Update documentation to more examples [#38](https://github.com/storybookjs/addon-react-native-web/pull/38) ([@gabimoncha](https://github.com/gabimoncha) [@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 3
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- gabimoncha ([@gabimoncha](https://github.com/gabimoncha))
+- Jake Hebert ([@panzacoder](https://github.com/panzacoder))
+
+---
+
 # v0.0.22 (Sun Jan 07 2024)
 
 #### 🐛 Bug Fix
