@@ -1,3 +1,5 @@
+const path = require('path');
+
 /** @type{import("@storybook/react-webpack5").StorybookConfig} */
 export default {
   stories: [
@@ -11,8 +13,12 @@ export default {
         modulesToTranspile: [
           'react-native-reanimated',
           'react-native-vector-icons',
+          'nativewind',
+          'react-native-css-interop',
         ],
         modulesToAlias: { 'victory-native': 'victory' },
+        babelPresets: ['nativewind/babel'],
+        babelPresetReactOptions: { jsxImportSource: 'nativewind' },
         babelPlugins: [
           '@babel/plugin-proposal-export-namespace-from',
           'react-native-reanimated/plugin',
@@ -42,5 +48,25 @@ export default {
   },
   docs: {
     autodocs: true,
+  },
+  webpackFinal: async (config) => {
+    config.module?.rules?.push({
+      test: /\.css$/,
+      use: [
+        {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [require('tailwindcss'), require('autoprefixer')],
+            },
+          },
+        },
+      ],
+      include: path.resolve(__dirname, '../'),
+    });
+
+    return {
+      ...config,
+    };
   },
 };

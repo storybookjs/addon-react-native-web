@@ -1,0 +1,14 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "tw",
+    ".*Style",
+    "color",
+    "backgroundColor"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
+}
