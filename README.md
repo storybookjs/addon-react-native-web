@@ -240,7 +240,7 @@ module.exports = {
 <summary>
 Click to here to see the config
 </summary>
-Due to the reanimated dependency and the extra babel configuration needed, add the following
+Nativewind requires some additional babel config to work correctly. You can see an example of this config below.
 
 ```js
 module.exports = {
@@ -256,16 +256,7 @@ module.exports = {
         ],
         babelPresets: ['nativewind/babel'],
         babelPresetReactOptions: { jsxImportSource: 'nativewind' },
-        babelPlugins: [
-          'react-native-reanimated/plugin',
-          [
-            '@babel/plugin-transform-react-jsx',
-            {
-              runtime: 'automatic',
-              importSource: 'nativewind',
-            },
-          ],
-        ],
+        babelPlugins: ['react-native-reanimated/plugin'],
       },
     },
   ],
