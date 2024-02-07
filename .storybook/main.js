@@ -16,7 +16,6 @@ export default {
           'nativewind',
           'react-native-css-interop',
         ],
-        modulesToAlias: { 'victory-native': 'victory' },
         babelPresets: ['nativewind/babel'],
         babelPresetReactOptions: { jsxImportSource: 'nativewind' },
         babelPlugins: [
