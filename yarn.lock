@@ -29,18 +29,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@auto-it/bot-list@npm:10.43.0":
-  version: 10.43.0
-  resolution: "@auto-it/bot-list@npm:10.43.0"
-  checksum: 10c0/76476130e627cbc340740230b195426a0fa807044b13ae1909731aa4b42894c4448840ee7a964d7ba8410e77fd5b233187e88de3801cbf3bc3cd68f42d752558
+"@auto-it/bot-list@npm:11.0.7":
+  version: 11.0.7
+  resolution: "@auto-it/bot-list@npm:11.0.7"
+  checksum: 10c0/282a9e94657ff2e0a8dd801c039c9d0db616d9dffd90ffc3c5de99643704792e4b4e49b5585ef77013aaf6289c54d834bbd123144faa79056c46831a4994114a
   languageName: node
   linkType: hard
 
-"@auto-it/core@npm:10.43.0":
-  version: 10.43.0
-  resolution: "@auto-it/core@npm:10.43.0"
+"@auto-it/core@npm:11.0.7":
+  version: 11.0.7
+  resolution: "@auto-it/core@npm:11.0.7"
   dependencies:
-    "@auto-it/bot-list": "npm:10.43.0"
+    "@auto-it/bot-list": "npm:11.0.7"
     "@endemolshinegroup/cosmiconfig-typescript-loader": "npm:^3.0.2"
     "@octokit/core": "npm:^3.5.1"
     "@octokit/plugin-enterprise-compatibility": "npm:1.3.0"
@@ -80,19 +80,21 @@ __metadata:
     type-fest: "npm:^0.21.1"
     typescript-memoize: "npm:^1.0.0-alpha.3"
     url-join: "npm:^4.0.0"
+  peerDependencies:
+    typescript: ">=2.7"
   peerDependenciesMeta:
-    typescript:
+    "@types/node":
       optional: true
-  checksum: 10c0/387b54904fd0317c9385326a8eba562de7375186ff7a7e3e04249a6af0bdbc8cd63566f888838bc310e9dba75ae3aa9e0caf6fea0d5efdfdad27587b9d6d7118
+  checksum: 10c0/588f976a6d6cdcf72689ed58418befa097bbd8589d7a2995d0d0b31d86cec3de9a90cb4458e6c91520a1de0963df2b441807da6c20f2cea482651349801ed94d
   languageName: node
   linkType: hard
 
-"@auto-it/npm@npm:10.43.0":
-  version: 10.43.0
-  resolution: "@auto-it/npm@npm:10.43.0"
+"@auto-it/npm@npm:11.0.7":
+  version: 11.0.7
+  resolution: "@auto-it/npm@npm:11.0.7"
   dependencies:
-    "@auto-it/core": "npm:10.43.0"
-    "@auto-it/package-json-utils": "npm:10.43.0"
+    "@auto-it/core": "npm:11.0.7"
+    "@auto-it/package-json-utils": "npm:11.0.7"
     await-to-js: "npm:^3.0.0"
     endent: "npm:^2.1.0"
     env-ci: "npm:^5.0.1"
@@ -105,44 +107,44 @@ __metadata:
     typescript-memoize: "npm:^1.0.0-alpha.3"
     url-join: "npm:^4.0.0"
     user-home: "npm:^2.0.0"
-  checksum: 10c0/14f140f25282a1538c6e6b5cb96d7b8df53eb9a2b0a4dcf13f5fe6f74d88f142d8e5b6fa97b069a27b3bf2b30ef4f73cfd876113610a151c9e599b60816d6eeb
+  checksum: 10c0/d8cfdaaa79954a685e28aa33cff34f322317e4877957365a422987bbba8d8b90e2d291b559c4ee6e47cb4e90e0d895e4f9fc935f33d12e64339bac609209efd7
   languageName: node
   linkType: hard
 
-"@auto-it/package-json-utils@npm:10.43.0":
-  version: 10.43.0
-  resolution: "@auto-it/package-json-utils@npm:10.43.0"
+"@auto-it/package-json-utils@npm:11.0.7":
+  version: 11.0.7
+  resolution: "@auto-it/package-json-utils@npm:11.0.7"
   dependencies:
     parse-author: "npm:^2.0.0"
     parse-github-url: "npm:1.0.2"
-  checksum: 10c0/6ff632dfa221fc94d3a1c0f4a484a408a7e026c82300443cac24e5f4112d4c5f3e3cdfccb85325d1fcdbb4af4e9e7bf3f2c51898d67972328d62d4c868226562
+  checksum: 10c0/caf259e7b1268674e8c19a6ddcb95a907ae3b027fe3c6be43e7ee2c78dc92063fa740266891afedc7f2e413a2dda2b1bf2bc6a664b70c01e48d047a521c5338f
   languageName: node
   linkType: hard
 
-"@auto-it/released@npm:10.43.0":
-  version: 10.43.0
-  resolution: "@auto-it/released@npm:10.43.0"
+"@auto-it/released@npm:11.0.7":
+  version: 11.0.7
+  resolution: "@auto-it/released@npm:11.0.7"
   dependencies:
-    "@auto-it/bot-list": "npm:10.43.0"
-    "@auto-it/core": "npm:10.43.0"
+    "@auto-it/bot-list": "npm:11.0.7"
+    "@auto-it/core": "npm:11.0.7"
     deepmerge: "npm:^4.0.0"
     fp-ts: "npm:^2.5.3"
     io-ts: "npm:^2.1.2"
     tslib: "npm:2.1.0"
-  checksum: 10c0/8a3fd816c8acde0da766ba19541d0d437aa938a9abeb4a57d5a689b5f4980d49a5547b9bf65cc7e8f5cc205a15a59e3830dbcabf9946a5c5979a9748e05ee974
+  checksum: 10c0/01c68622700d03da5ba74dee3789ddcfe18eed93826102b3bf14eb92ede351660edb864e4335b3e538a2c9e1453262b53d46b7ef2809b0f9af35a06795670fa6
   languageName: node
   linkType: hard
 
-"@auto-it/version-file@npm:10.43.0":
-  version: 10.43.0
-  resolution: "@auto-it/version-file@npm:10.43.0"
+"@auto-it/version-file@npm:11.0.7":
+  version: 11.0.7
+  resolution: "@auto-it/version-file@npm:11.0.7"
   dependencies:
-    "@auto-it/core": "npm:10.43.0"
+    "@auto-it/core": "npm:11.0.7"
     fp-ts: "npm:^2.5.3"
     io-ts: "npm:^2.1.2"
     semver: "npm:^7.0.0"
     tslib: "npm:1.10.0"
-  checksum: 10c0/62c25f5749e41f4ca3214a222206c3fdaccc67e03daed20c308f6251351879281123cff21b70119ceb713e79f572d13b9f1fd8f668fb49c31bef99589411a115
+  checksum: 10c0/949074ebc1cd54780acae3a735c77968646da71cd05396ae03785d107cc78c4aab2327f255c7da292ac09c4585c18c1bb3c1582b2cad99dd287c3430efae7d14
   languageName: node
   linkType: hard
 
@@ -4544,7 +4546,7 @@ __metadata:
     "@storybook/react": "npm:8.0.0-beta.4"
     "@storybook/react-webpack5": "npm:8.0.0-beta.4"
     "@types/react-native-vector-icons": "npm:^6.4.18"
-    auto: "npm:^10.36.5"
+    auto: "npm:^11.0.7"
     autoprefixer: "npm:^10.4.17"
     babel-loader: "npm:^9.1.3"
     babel-plugin-react-docgen-typescript: "npm:^1.5.1"
@@ -6641,14 +6643,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"auto@npm:^10.36.5":
-  version: 10.43.0
-  resolution: "auto@npm:10.43.0"
+"auto@npm:^11.0.7":
+  version: 11.0.7
+  resolution: "auto@npm:11.0.7"
   dependencies:
-    "@auto-it/core": "npm:10.43.0"
-    "@auto-it/npm": "npm:10.43.0"
-    "@auto-it/released": "npm:10.43.0"
-    "@auto-it/version-file": "npm:10.43.0"
+    "@auto-it/core": "npm:11.0.7"
+    "@auto-it/npm": "npm:11.0.7"
+    "@auto-it/released": "npm:11.0.7"
+    "@auto-it/version-file": "npm:11.0.7"
     await-to-js: "npm:^3.0.0"
     chalk: "npm:^4.0.0"
     command-line-application: "npm:^0.10.1"
@@ -6659,7 +6661,7 @@ __metadata:
     tslib: "npm:2.1.0"
   bin:
     auto: dist/bin/auto.js
-  checksum: 10c0/48da3ff464e833cb8ba392c6d52ad1d9e9b5acdeeedda60f7ecfebe9010d801660df8204781d2b583423b536ce919f3c5b79586d8a8e52e683519caf49f8997e
+  checksum: 10c0/2acf946139444ef026d624cef931680ca081fa091fabfbccfbff6685b19921bb9a8541922a618cf7d0ddcdc0c0f964e872294cf4210769a512a8f25d1d0440a3
   languageName: node
   linkType: hard
 
