@@ -256,7 +256,16 @@ module.exports = {
         ],
         babelPresets: ['nativewind/babel'],
         babelPresetReactOptions: { jsxImportSource: 'nativewind' },
-        babelPlugins: ['react-native-reanimated/plugin'],
+        babelPlugins: [
+          'react-native-reanimated/plugin',
+           [
+            '@babel/plugin-transform-react-jsx',
+            {
+              runtime: 'automatic',
+              importSource: 'nativewind',
+            },
+          ],
+         ],
       },
     },
   ],
