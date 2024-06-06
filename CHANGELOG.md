@@ -1,3 +1,21 @@
+# v0.0.24 (Thu Jun 06 2024)
+
+#### 🐛 Bug Fix
+
+- Update README.md with additional nativewind information [#89](https://github.com/storybookjs/addon-react-native-web/pull/89) ([@the-simian](https://github.com/the-simian))
+- feat: v8 [#87](https://github.com/storybookjs/addon-react-native-web/pull/87) ([@dannyhw](https://github.com/dannyhw))
+- Adding TailWind configuration example [#85](https://github.com/storybookjs/addon-react-native-web/pull/85) ([@kimchouard](https://github.com/kimchouard) [@dannyhw](https://github.com/dannyhw))
+- remove victory [#84](https://github.com/storybookjs/addon-react-native-web/pull/84) ([@dannyhw](https://github.com/dannyhw))
+- doesn't run on main [#83](https://github.com/storybookjs/addon-react-native-web/pull/83) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 3
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+- Jesse Harlin ([@the-simian](https://github.com/the-simian))
+- Kim CHOUARD ([@kimchouard](https://github.com/kimchouard))
+
+---
+
 # v0.0.23 (Wed Feb 07 2024)
 
 #### 🐛 Bug Fix
