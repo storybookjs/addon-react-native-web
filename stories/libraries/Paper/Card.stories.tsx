@@ -24,5 +24,7 @@ export const Basic: StoryObj<typeof Card> = {
     content:
       'Cillum sit aute cillum velit occaecat adipisicing aliquip sit ex quis ut dolor.',
     title: 'Card title',
+    onCancel: () => {},
+    onConfirm: () => {},
   },
 };
