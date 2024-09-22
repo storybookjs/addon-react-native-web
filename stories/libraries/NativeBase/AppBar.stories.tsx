@@ -1,8 +1,9 @@
-import { ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
+
 import { AppBar } from './AppBar';
 import { NativeBaseProvider } from 'native-base';
 
-export default {
+const meta = {
   component: AppBar,
   decorators: [
     (Story) => (
@@ -11,8 +12,11 @@ export default {
       </NativeBaseProvider>
     ),
   ],
-} as ComponentMeta<typeof AppBar>;
+} satisfies Meta<typeof AppBar>;
 
-export const Basic = {
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Basic: Story = {
   args: {},
 };

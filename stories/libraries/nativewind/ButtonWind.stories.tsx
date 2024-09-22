@@ -14,5 +14,6 @@ type Story = StoryObj<typeof meta>;
 export const Basic: Story = {
   args: {
     label: 'Click me',
+    onPress: () => {},
   },
 };

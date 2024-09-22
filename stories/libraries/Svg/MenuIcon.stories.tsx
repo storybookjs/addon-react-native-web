@@ -1,13 +1,17 @@
-import { ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { MenuIcon } from './MenuIcon';
 
-export default {
+const meta = {
   title: 'libraries/SVG/MenuIcon',
   component: MenuIcon,
-} as ComponentMeta<typeof MenuIcon>;
+} satisfies Meta<typeof MenuIcon>;
 
-export const Basic = {
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Basic: Story = {
   args: {
     color: '#000',
   },
