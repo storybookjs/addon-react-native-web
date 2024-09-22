@@ -1,13 +1,17 @@
-import { ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Gradient } from './Gradient';
 
-export default {
+const meta = {
   title: 'libraries/Expo gradient/Gradient',
   component: Gradient,
-} as ComponentMeta<typeof Gradient>;
+} satisfies Meta<typeof Gradient>;
 
-export const Basic = {
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Basic: Story = {
   args: {
     text: 'Gradient example',
   },

@@ -2,11 +2,11 @@ const path = require('path');
 
 /** @type{import("@storybook/react-webpack5").StorybookConfig} */
 export default {
-  stories: [
-    '../stories/**/*.stories.mdx',
-    '../stories/**/*.stories.@(js|jsx|ts|tsx)',
-  ],
+  stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
+    '@storybook/addon-webpack5-compiler-babel',
+    '@chromatic-com/storybook',
+    '@storybook/addon-essentials',
     {
       name: '../preset.js',
       options: {
@@ -24,7 +24,6 @@ export default {
         ],
       },
     },
-    '@storybook/addon-essentials',
   ],
   framework: {
     name: '@storybook/react-webpack5',
@@ -44,9 +43,6 @@ export default {
       // makes string and boolean types that can be undefined appear as inputs and switches
       shouldRemoveUndefinedFromOptional: true,
     },
-  },
-  docs: {
-    autodocs: true,
   },
   webpackFinal: async (config) => {
     config.module?.rules?.push({

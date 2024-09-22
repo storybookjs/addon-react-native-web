@@ -1,13 +1,16 @@
-import { ComponentMeta } from '@storybook/react';
-
+import { Meta, StoryObj } from '@storybook/react';
 import { FavoriteIcon } from './FavoriteIcon';
 
-export default {
+const meta = {
   title: 'libraries/SVG/FavoriteIcon',
   component: FavoriteIcon,
-} as ComponentMeta<typeof FavoriteIcon>;
+} satisfies Meta<typeof FavoriteIcon>;
 
-export const Basic = {
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Basic: Story = {
   args: {
     color: '#000',
   },

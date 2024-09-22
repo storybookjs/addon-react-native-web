@@ -1,13 +1,17 @@
-import { ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { FolderIcon } from './FolderIcon';
 
-export default {
+const meta = {
   title: 'libraries/SVG/FolderIcon',
   component: FolderIcon,
-} as ComponentMeta<typeof FolderIcon>;
+} satisfies Meta<typeof FolderIcon>;
 
-export const Basic = {
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Basic: Story = {
   args: {
     color: '#000',
   },

@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { StyleSheet, View } from 'react-native';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { Card } from './Card';
@@ -17,12 +17,14 @@ export default {
       </View>
     </PaperProvider>
   ),
-} as ComponentMeta<typeof Card>;
+} satisfies Meta<typeof Card>;
 
-export const Basic: ComponentStoryObj<typeof Card> = {
+export const Basic: StoryObj<typeof Card> = {
   args: {
     content:
       'Cillum sit aute cillum velit occaecat adipisicing aliquip sit ex quis ut dolor.',
     title: 'Card title',
+    onCancel: () => {},
+    onConfirm: () => {},
   },
 };
