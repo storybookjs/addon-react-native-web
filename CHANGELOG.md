@@ -1,3 +1,15 @@
+# v0.0.25 (Sun Sep 22 2024)
+
+#### 🐛 Bug Fix
+
+- feat: upgrade [#91](https://github.com/storybookjs/addon-react-native-web/pull/91) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.24 (Thu Jun 06 2024)
 
 #### 🐛 Bug Fix
