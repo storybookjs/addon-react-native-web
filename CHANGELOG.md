@@ -1,3 +1,15 @@
+# v0.0.26 (Fri Sep 27 2024)
+
+#### 🐛 Bug Fix
+
+- docs: update image in readme [#95](https://github.com/storybookjs/addon-react-native-web/pull/95) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.25 (Sun Sep 22 2024)
 
 #### 🐛 Bug Fix
