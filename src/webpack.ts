@@ -94,7 +94,7 @@ const webpackFinal = async (config: any, options: Options) => {
 
   // fix for uncompiled react-native dependencies
   config.module.rules.push({
-    test: /\.(js|jsx|ts|tsx)$/,
+    test: /\.(js|jsx|ts|tsx|mjs)$/,
     loader: 'babel-loader',
     // include logic copied from https://github.com/expo/expo-cli/blob/master/packages/webpack-config/src/loaders/createBabelLoader.ts
     include(filename: string) {
@@ -146,6 +146,7 @@ const webpackFinal = async (config: any, options: Options) => {
     '.web.jsx',
     '.web.ts',
     '.web.tsx',
+    '.web.mjs',
     ...config.resolve.extensions,
   ];
 

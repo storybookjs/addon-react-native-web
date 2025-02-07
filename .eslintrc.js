@@ -4,5 +4,6 @@ module.exports = {
   rules: {
     'jsx-quotes': [2, 'prefer-single'],
     'react/react-in-jsx-scope': 'off',
+    'react-native/no-inline-styles': 'off',
   },
 };
