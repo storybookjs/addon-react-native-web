@@ -243,7 +243,12 @@ Click to here to see the config
 </summary>
 Nativewind requires some additional babel config to work correctly. You can see an example of this config below.
 
+Tip: Use the web version of storybook to receive compilation and runtime errors that may not bubble up from the mobile simulators. 
+
 ```js
+// .ondevice/main.ts 
+// AND/OR .storybook/main.ts
+
 module.exports = {
   addons: [
     /*existing addons,*/
@@ -255,22 +260,82 @@ module.exports = {
           'nativewind',
           'react-native-css-interop',
         ],
-        babelPresets: ['nativewind/babel'],
         babelPresetReactOptions: { jsxImportSource: 'nativewind' },
+        // If you have a bable.config.js file: this can also be placed there, and removed from here
+        babelPresets: ['nativewind/babel'],
         babelPlugins: [
+          // If you have a bable.config.js file: this can also be placed there, and removed from here
           'react-native-reanimated/plugin',
+          // If you have a bable.config.js file: this can also be placed there, and removed from here
            [
             '@babel/plugin-transform-react-jsx',
             {
               runtime: 'automatic',
               importSource: 'nativewind',
             },
-          ],
+           ],
          ],
       },
     },
   ],
 };
+```
+
+```js
+// .ondevice/preview.tsx
+// add the following
+import '../styles/global.css'
+```
+
+
+```js
+// metro.config.js
+const path = require("path");
+const { getDefaultConfig } = require("expo/metro-config");
+const { withNativeWind } = require("nativewind/metro");
+const withStorybook = require("@storybook/react-native/metro/withStorybook");
+
+const defaultConfig = getDefaultConfig(__dirname);
+
+// 👇 important: nativeWindConfig is defined and passed to withStorybook!
+// replace this: module.exports = withNativeWind(config, { input: "./global.css" });
+// with the below (and update your input):
+const nativeWindConfig = withNativeWind(defaultConfig, { input: "./styles/global.css" });
+
+module.exports = withStorybook(nativeWindConfig, {
+  // this line helps you switch between app and storybook using variable in package.json script,
+  // and changes to your app's main entry point.
+  enabled: process.env.EXPO_PUBLIC_STORYBOOK_ENABLED === "true",
+  configPath: path.resolve(__dirname, "./.ondevice"),
+  onDisabledRemoveStorybook: true,
+});
+```
+
+
+
+```js
+// babel.config.js
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: [
+      ["babel-preset-expo", { jsxImportSource: "nativewind" }],
+      "nativewind/babel",
+    ],
+    plugins: [
+      ["babel-plugin-react-docgen-typescript", { exclude: "node_modules" }],
+      'react-native-reanimated/plugin',
+      [
+        '@babel/plugin-transform-react-jsx',
+        {
+          runtime: 'automatic',
+          importSource: 'nativewind',
+        },
+      ],
+    ],
+  };
+};
+
 ```
 
 </details>
