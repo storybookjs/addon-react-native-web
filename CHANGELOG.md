@@ -15,6 +15,23 @@
 
 ---
 
+# v0.0.27 (Fri Feb 07 2025)
+
+#### 🐛 Bug Fix
+
+- fix(webpack): fix derivation of __DEV__ from NODE_ENV [#99](https://github.com/storybookjs/addon-react-native-web/pull/99) ([@lbland94](https://github.com/lbland94))
+
+#### ⚠️ Pushed to `main`
+
+- fix: include mjs in babel loader test ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 2
+
+- [@lbland94](https://github.com/lbland94)
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.26 (Fri Sep 27 2024)
 
 #### 🐛 Bug Fix
