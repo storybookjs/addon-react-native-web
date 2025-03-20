@@ -51,11 +51,13 @@ export const Draggable = ({ children, style }: DraggableProps) => {
           { translateY: Yposition.value },
           { scale: scale.value },
         ],
-      } as TransformsStyle),
+      }) as TransformsStyle,
   );
 
+  const composed = Gesture.Simultaneous(panGesture, tapGesture);
+
   return (
-    <GestureDetector gesture={Gesture.Simultaneous(panGesture, tapGesture)}>
+    <GestureDetector gesture={composed}>
       <Animated.View style={[styles.box, animatedStyle, style]}>
         {children}
       </Animated.View>
