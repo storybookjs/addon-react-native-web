@@ -1,3 +1,15 @@
+# v0.0.28 (Thu Mar 20 2025)
+
+#### 🐛 Bug Fix
+
+- feat: allow react 19 in peer deps [#103](https://github.com/storybookjs/addon-react-native-web/pull/103) ([@dannyhw](https://github.com/dannyhw))
+
+#### Authors: 1
+
+- Daniel Williams ([@dannyhw](https://github.com/dannyhw))
+
+---
+
 # v0.0.27 (Fri Feb 07 2025)
 
 #### 🐛 Bug Fix
