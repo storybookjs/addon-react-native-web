@@ -1,3 +1,15 @@
+# v0.0.29 (Fri Mar 21 2025)
+
+#### 🐛 Bug Fix
+
+- Update Tailwind / Nativewind information in readme [#96](https://github.com/storybookjs/addon-react-native-web/pull/96) ([@rwitchell](https://github.com/rwitchell))
+
+#### Authors: 1
+
+- Robert Witchell ([@rwitchell](https://github.com/rwitchell))
+
+---
+
 # v0.0.28 (Thu Mar 20 2025)
 
 #### 🐛 Bug Fix
