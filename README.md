@@ -1,5 +1,8 @@
 # React Native Web addon for Storybook
 
+> [!NOTE]
+> This package has been deprecated. Its features are now natively supported in Storybook. See the [React Native Web documentation](https://storybook.js.org/docs/get-started/frameworks/react-native-web-vite#in-a-project-with-storybook-addon-react-native-web) for more information and migration instructions.
+
 This addon configures `@storybook/react` to display React Native (RN) projects using React Native for Web (RNW)
 
 - [React Native Web addon for Storybook](#react-native-web-addon-for-storybook)
